@@ -1,3 +1,9 @@
+aspell (0.60.8-5deepin1) unstable; urgency=medium
+
+  * update version for rebuild.
+
+ -- liujianqiang <liujianqiang@uniontech.com>  Mon, 16 Jun 2025 13:19:04 +0800
+
 aspell (0.60.8-4) unstable; urgency=medium
 
   [ Debian Janitor ]
