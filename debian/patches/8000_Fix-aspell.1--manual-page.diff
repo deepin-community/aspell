@@ -1,0 +1,129 @@
+Author: Bjarni Ingi Gislason <bjarniig@simnet.is>
+Description:  aspell.1: fix some formatting issues in the man page
+Bug-Debian: http://bugs.debian.org/1037059
+Applied-Upstream: Reported (https://github.com/GNUAspell/aspell/issues/636)
+
+Here are some fixes.
+ 
+Input file is aspell.1
+
+
+mandoc: aspell.1:7:2: WARNING: skipping paragraph macro: br at the end of SH
+mandoc: aspell.1:330:2: WARNING: skipping paragraph macro: PP after SH
+
+####
+
+Remove space characters at the end of lines.
+
+25:Aspell Utility.  
+27:This manual page is maintained separately from the 
+313:where 
+
+#####
+
+Change '-' (\-) to '\(en' (en-dash) for a numeric range.
+
+aspell.1:74:\fBexpand\fR [\fB1\-4\fR]
+
+#####
+
+Change -- in x--y to \(em (em-dash), or, if an
+option, to \-\-
+
+255:\fB--backup\fR, \fB\-\-dont\-backup\fR, \fB\-b\fR, \fB\-x\fR
+
+#####
+
+Increase size of ~ (tilde) to make it more visible
+with "troff" by using character \(ti.
+
+299:.I "~/.aspell.conf"
+
+#####
+
+Change a HYPHEN-MINUS (code 0x55, 2D) to a minus (\-), if in front of a
+name for an option.
+
+12:.B "ispell -a"
+54:.I "ispell -a"
+176:or nroff.  The alternative shortcut options are '-e' for email, '-H'
+177:for Html/Sgml, '-t' for Tex or '-n' for Nroff.
+
+#####
+
+Inhibit the hyphenation of 'aspell' in
+
+.I "\(ti/.aspell.conf"
+
+
+--- a/manual/aspell.1
++++ b/manual/aspell.1
+@@ -4,12 +4,11 @@ aspell \- interactive spell checker
+ .SH SYNOPSIS
+ .B aspell
+ .I "[options] <command>"
+-.br
+ .SH "DESCRIPTION"
+ .B aspell
+ is a utility program that connects to the Aspell library so that it can
+ function as an
+-.B "ispell -a"
++.B "ispell \-a"
+ replacement, as an independent spell checker, as a test utility to test
+ out Aspell library features, and as a utility for managing dictionaries
+ used by the library.
+@@ -51,7 +50,7 @@ Spell\-check a single file.
+ .TP
+ \fBpipe\fR, \fB\-a\fR
+ Run Aspell in
+-.I "ispell -a"
++.I "ispell \-a"
+ compatibility mode.
+ .TP
+ .B list
+@@ -71,7 +70,7 @@ Output the soundslike equivalent of each
+ .B munch
+ Generate possible root words and affixes from an input list of words.
+ .TP
+-\fBexpand\fR [\fB1\-4\fR]
++\fBexpand\fR [\fB1\(en4\fR]
+ Expands the affix flags of each affix compressed word entered.
+ .TP
+ \fBclean\fR [\fBstrict\fR]
+@@ -173,8 +172,8 @@ Add or remove paths searched for filters
+ .TP
+ \fB\-\-mode=\fR\fI<string>\fR, \fB\-e\fR, \fB\-H\fR, \fB\-t\fR, \fB\-n\fR
+ Sets the filter mode.  \fIMode\fR is one of none, url, email, html, tex
+-or nroff.  The alternative shortcut options are '-e' for email, '-H'
+-for Html/Sgml, '-t' for Tex or '-n' for Nroff.
++or nroff.  The alternative shortcut options are '\-e' for email, '\-H'
++for Html/Sgml, '\-t' for Tex or '\-n' for Nroff.
+ .TP
+ \fB\-\-encoding=\fR\fI<string>\fR
+ encoding the document is expected to be in.  The default depends on the
+@@ -252,7 +251,7 @@ These options are part of the
+ .I aspell
+ Utility and work independently of the library.
+ .TP
+-\fB--backup\fR, \fB\-\-dont\-backup\fR, \fB\-b\fR, \fB\-x\fR
++\fB\-\-backup\fR, \fB\-\-dont\-backup\fR, \fB\-b\fR, \fB\-x\fR
+ The aspell utility creates a backup file by making a copy and appending
+ .I .bak
+ to file name.  This only applies when the command is
+@@ -296,7 +295,7 @@ default global configuration file is
+ .I "/etc/aspell.conf"
+ or another file specified by option \fI\-\-conf\fR and is checked first.
+ The default per user configuration file
+-.I "~/.aspell.conf"
++.I "\%\(ti/.aspell.conf"
+ located in the
+ .B "$HOME"
+ directory (or another file specified by option \fI\-\-per\-conf\fR) is
+@@ -327,7 +326,6 @@ with a '#' as anything from a '#' to a n
+ are also allowed.  The \fI/etc/aspell.conf\fR file is a good example of
+ how to set these options and the Aspell Manual has more detailed info.
+ .SH SEE ALSO
+-.PP
+ .BR aspell\-import (1),
+ .BR prezip\-bin (1),
+ .BR run\-with\-aspell (1),
