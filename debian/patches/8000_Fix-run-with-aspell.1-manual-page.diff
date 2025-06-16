@@ -1,0 +1,35 @@
+Author: Bjarni Ingi Gislason <bjarniig@simnet.is>
+Description: run-with-aspell.1: Fix some formatting issues in the man page
+Bug-Debian: http://bugs.debian.org/1037060
+Applied-Upstream: Reported (https://github.com/GNUAspell/aspell/issues/636)
+
+Here are some fixes.
+
+mandoc: run-with-aspell.1:8:2: WARNING: skipping paragraph macro: br at the end of SH
+mandoc: run-with-aspell.1:29:2: WARNING: skipping paragraph macro: PP after SH
+
+#######
+
+Remove space characters at the end of lines.
+
+10:The recommended way to use 
+14:is to change the 
+
+--- a/manual/run-with-aspell.1
++++ b/manual/run-with-aspell.1
+@@ -5,7 +5,6 @@ replacement
+ .SH SYNOPSIS
+ .B run\-with\-aspell
+ .I "<command>"
+-.br
+ .SH "DESCRIPTION"
+ The recommended way to use 
+ .B Aspell
+@@ -26,7 +25,6 @@ The old method of mapping ispell to Aspe
+ create compatibility problems with programs that actually require ispell
+ such as ispell's own scripts.
+ .SH SEE ALSO
+-.PP
+ .BR aspell (1),
+ .BR aspell\-import (1),
+ .BR word\-list\-compress (1)

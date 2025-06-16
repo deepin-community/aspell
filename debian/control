@@ -3,11 +3,11 @@ Maintainer: Agustin Martin Domingo <agmartin@debian.org>
 Section: text
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
-               libncursesw5-dev | libncurses-dev,
+               libncurses-dev,
                texinfo,
                autopoint,
-	       lynx
-Standards-Version: 4.6.0.1
+	       w3m
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
 Vcs-Browser: https://salsa.debian.org/debian/aspell
 Vcs-Git: https://salsa.debian.org/debian/aspell.git

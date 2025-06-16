@@ -1,8 +1,28 @@
-aspell (0.60.8-5deepin1) unstable; urgency=medium
+aspell (0.60.8-6) unstable; urgency=medium
 
-  * update version for rebuild.
+  * debian/rules:
+    - Make sure auto/mk-src.pod is removed in override_dh_clean target
+      (Closes: #1043601).
+    - Remove obsolete comments.
+  * debian/{control,rules}: Use w3m instead of lynx to generate
+    changelog.txt (Closes: #1049566).
 
- -- liujianqiang <liujianqiang@uniontech.com>  Mon, 16 Jun 2025 13:19:04 +0800
+ -- Agustin Martin Domingo <agmartin@debian.org>  Fri, 25 Aug 2023 20:31:12 +0200
+
+aspell (0.60.8-5) unstable; urgency=medium
+
+  * New patches to fix minor issues with aspell.1 and run-with-aspell.1
+    man pages (thanks Bjarni Ingi Gislason).
+    - 8000_Fix-aspell.1--manual-page.diff (Closes: #1037059).
+    - 8000_Fix-run-with-aspell.1-manual-page.diff (Closes: #1037060).
+  * debian/libaspell15.lintian-overrides: Update to new format and
+    document.
+  * debian/source/lintian-overrides: New overrides file.
+  * debian/control:
+    - Update Build-Depends: libncursesw5-dev => libncurses-dev.
+    - Bump Standards-Version. No changes required.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 12 Jun 2023 11:46:16 +0200
 
 aspell (0.60.8-4) unstable; urgency=medium
 

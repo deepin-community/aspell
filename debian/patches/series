@@ -6,3 +6,5 @@
 08_filters-info-installdir.diff
 09_debian-dictdir.diff
 1000-objstack-assert-that-the-alloc-size-will-fit-within-.patch
+8000_Fix-aspell.1--manual-page.diff
+8000_Fix-run-with-aspell.1-manual-page.diff
