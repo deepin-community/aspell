@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aspell-0.60.8-pre2\n"
 "Report-Msgid-Bugs-To: kevina@gnu.org\n"
-"POT-Creation-Date: 2019-10-12 18:20-0400\n"
+"POT-Creation-Date: 2026-01-27 03:47-0500\n"
 "PO-Revision-Date: 2019-09-24 10:51-0400\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -683,7 +683,9 @@ msgid "Invalid Option: %s"
 msgstr "无效选项：%s"
 
 #: prog/aspell.cpp:322
-msgid " does not take any parameters."
+#, fuzzy, c-format
+#| msgid " does not take any parameters."
+msgid "'%s' does not take any parameters."
 msgstr "不带任何参数。"
 
 #: prog/aspell.cpp:335 prog/aspell.cpp:395
@@ -934,17 +936,6 @@ msgstr "    转储，创建或合并主字典，个人字典，或置换字典�
 #: prog/aspell.cpp:2874
 msgid "  <norm-form>      normalization form to use, either none, internal, or strict"
 msgstr "  <norm-form>      要使用的规范化形式，可以为none，internal，或 strict"
-
-#: prog/aspell.cpp:2884
-#, c-format
-msgid ""
-"\n"
-"Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
-"\n"
-msgstr ""
-"\n"
-"Aspell %s. 版权所有 2000-2019 Kevin Atkinson。\n"
-"\n"
 
 #: prog/aspell.cpp:2918
 msgid ""
@@ -1200,7 +1191,7 @@ msgstr "带 soundslike 数据的总单词长度大于 240 个字符。"
 msgid "There must be at least one \"add\" line."
 msgstr "必须有至少一行“添加”行。"
 
-#: modules/speller/default/suggest.cpp:1721
+#: modules/speller/default/suggest.cpp:1730
 msgid "one of ultra, fast, normal, slow, or bad-spellers"
 msgstr "ultra、fast、normal、slow 或 bad-spellers 其中之一"
 
@@ -1374,6 +1365,20 @@ msgstr "检查 Texinfo 文档的模式"
 #: modules/filter/modes/url.amf:5
 msgid "mode to skip URL like constructs (default mode)"
 msgstr "跳过类似 URL 结构的模式（缺省模式）"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
+#~| "\n"
+#~ msgid ""
+#~ "\n"
+#~ "Aspell %s.  Copyright 2000-2023 by Kevin Atkinson.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Aspell %s. 版权所有 2000-2019 Kevin Atkinson。\n"
+#~ "\n"
 
 #~ msgid "edit distance to use, override sug-mode default"
 #~ msgstr "编辑要使用的距离，覆盖 sug-mode 默认值"

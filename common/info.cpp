@@ -391,7 +391,7 @@ namespace acommon {
     to_add->c_struct.code = to_add->code.c_str();
 
     // check if the code is in a valid form and normalize entry.  
-    // If its not in a valid form than ignore this entry
+    // If its not in a valid form, then ignore this entry
 
     if (to_add->code.size() >= 2 
 	&& asc_isalpha(to_add->code[0]) && asc_isalpha(to_add->code[1])) 
@@ -725,18 +725,16 @@ namespace acommon {
   // DictInfo
   //
 
-  const DictInfoList * get_dict_info_list(Config * c)
+  PosibErr<const DictInfoList *> get_dict_info_list(Config * c)
   {
-    const MDInfoListAll * la = md_info_list_of_lists.get_lists(c);
-    if (la == 0) return 0;
-    else return &la->dict_info_list;
+    RET_ON_ERR_SET(md_info_list_of_lists.get_lists(c), const MDInfoListAll *, la);
+    return &la->dict_info_list;
   }
 
-  const StringMap * get_dict_aliases(Config * c)
+  PosibErr<const StringMap *> get_dict_aliases(Config * c)
   {
-    const MDInfoListAll * la = md_info_list_of_lists.get_lists(c);
-    if (la == 0) return 0;
-    else return &la->dict_aliases;
+    RET_ON_ERR_SET(md_info_list_of_lists.get_lists(c), const MDInfoListAll *, la);
+    return &la->dict_aliases;
   }
 
   DictInfoEnumeration * DictInfoList::elements() const

@@ -5,7 +5,7 @@
 GNU Aspell is a spell checker designed to eventually replace Ispell.
 It can either be used as a library or as an independent spell checker.
 
-Copyright © 2000-2019 Kevin Atkinson.
+Copyright © 2000-2026 Kevin Atkinson.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.1 or
@@ -15,10 +15,10 @@ copy of the license is included in the section entitled "GNU Free
 Documentation License". -->
 <!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>GNU Aspell 0.60.8: The Options</title>
+<title>GNU Aspell 0.60.8.2: The Options</title>
 
-<meta name="description" content="Aspell 0.60.8 spell checker user&rsquo;s manual.">
-<meta name="keywords" content="GNU Aspell 0.60.8: The Options">
+<meta name="description" content="Aspell 0.60.8.2 spell checker user&rsquo;s manual.">
+<meta name="keywords" content="GNU Aspell 0.60.8.2: The Options">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="makeinfo">
@@ -376,17 +376,17 @@ Defaults to 10.
 
 <p>The <samp>markdown</samp> filter/mode skips over code and links in Markdown
 documents.  The mode also handles HTML via the <samp>html</samp> filter
-which runs after the Markdown filer.
+which runs after the Markdown filter.
 </p>
 <p>Properly parsing Markdown requires reading the entire document in at
 once, which doesn&rsquo;t fit well into the existing filter framework so the
 filter parses the document a line at a time and makes a best guess
-when a line ends without enough information to correctly parse a a
+when a line ends without enough information to correctly parse a
 tag.  For example in the following:
 </p><div class="example">
 <pre class="example">`This looks like inline code
 
-But it's not, becuase the of the blank line.
+But it's not, because of the blank line.
 </pre></div>
 <p>the first line will be incorrectly skipped.
 </p>
@@ -400,7 +400,7 @@ the command line use &lsquo;<samp>--dont-markdown-multiline-tags</samp>&rsquo;).
 </dd>
 <dt><b>markdown-skip-ref-labels</b></dt>
 <dd><p><i>(boolean)</i>
-Controls if ref lables are skipped.  For example, when this
+Controls if ref labels are skipped.  For example, when this
 option is enabled &lsquo;<samp>[ref]</samp>&rsquo; will be skipped over in:
 </p><div class="example">
 <pre class="example">[link][ref]
@@ -743,7 +743,7 @@ the global <samp>conf</samp> file
 <dt><b>keyboard</b></dt>
 <dd><p><i>(file)</i>
 use this keyboard layout for suggesting possible words.  These spelling
-errors happen if a user accidently presses a key next to the intended
+errors happen if a user accidental presses a key next to the intended
 correct key.  The default is keyboard standard.  If you are creating
 documents, you may want to set it according to your particular type of
 keyboard.  If spellchecking documents created elsewhere, you might

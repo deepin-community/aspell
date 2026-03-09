@@ -4,7 +4,7 @@
 
 --- a/gen/filter.pot
 +++ b/gen/filter.pot
-@@ -13,6 +13,10 @@
+@@ -13,6 +13,10 @@ msgstr ""
  msgid "swaps visible and invisible text"
  msgstr ""
  
@@ -15,7 +15,7 @@
  #: modules/filter/email-filter.info:7
  msgid "filter for skipping quoted text in email messages"
  msgstr ""
-@@ -109,6 +113,10 @@
+@@ -109,6 +113,10 @@ msgstr ""
  msgid "mode to check any lines starting with a #"
  msgstr ""
  

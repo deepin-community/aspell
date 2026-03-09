@@ -5,7 +5,7 @@ This is the user’s manual for Aspell
 GNU Aspell is a spell checker designed to eventually replace Ispell.  It
 can either be used as a library or as an independent spell checker.
 
-Copyright © 2000–2019 Kevin Atkinson.
+Copyright © 2000–2026 Kevin Atkinson.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -21,8 +21,8 @@ END-INFO-DIR-ENTRY
 
 File: aspell.info,  Node: Top,  Next: Introduction,  Up: (dir)
 
-GNU Aspell 0.60.8
-*****************
+GNU Aspell 0.60.8.2
+*******************
 
 This is the user’s manual for Aspell
 
@@ -153,7 +153,7 @@ International Support          x        x        x          ?
 
 The Suggestion Intelligence is based on a small test kernel of
 misspelled/correct word pairs.  Go to <http://aspell.net/test/cur/> for
-more info and how you can help contribuxte to the test kernel.
+more info and how you can help contribute to the test kernel.
 
 If you have any other information you would like to add to this chart
 please contact me at <kevina@gnu.org>.
@@ -218,9 +218,9 @@ Hunspell has better support for language peculiarities including
 compounding and complex morphology.  However the Hunspell (v1.7.0)
 utility currently has problems with apostrophe (‘'’) in words.
 
-Aspell generally has better suggestions for non-phonetic langauges such
+Aspell generally has better suggestions for non-phonetic languages such
 as English and French.  Aspell suggestion speed also tends to be
-significantly faster than Hunspell.  For a comparasion of suggestion
+significantly faster than Hunspell.  For a compression of suggestion
 quality and speed see <http://aspell.net/test/>.
 
 
@@ -478,8 +478,8 @@ by many applications that provide spell checker functionality.  Enchant
 is used by AbiWord; LyX; and via gspell and GtkSpell, a number of Gtk
 and GNOME applications.
 
-By default enchant is configuired to prefer Hunaspell over Aspell but
-this can easily be changed on a per-language basis.  If you wish to use
+By default enchant is configured to prefer Hunspell over Aspell but this
+can easily be changed on a per-language basis.  If you wish to use
 Aspell for a specific dictionary say, American English, make sure that
 the Aspell backend is installed (on Debian and Ubuntu based system it is
 included as part of the base package) then create the file
@@ -491,7 +491,7 @@ To test it.  Restart the enchant based application and then compare the
 suggestion list with an application that used Aspell or by using the
 ‘aspell check’ or ‘aspell pipe’ commands.
 
-You can also prefer Aspell in general over Humspell by instead using:
+You can also prefer Aspell in general over Hunspell by instead using:
 
      *:aspell,hunspell
 
@@ -500,12 +500,12 @@ Then if an Aspell dictionary is available Enchant should use it.
 3.3.2 With Emacs and XEmacs
 ---------------------------
 
-Newer versions of emacs should prefer ‘aspell’ over both ‘ispell’ and
-‘hunspell’, if you find this is not the case, then addding the line:
+Newer versions of Emacs should prefer ‘aspell’ over both ‘ispell’ and
+‘hunspell’, if you find this is not the case, then adding the line:
 
 (setq-default ispell-program-name "aspell")
 
-to the end of your ‘.emacs’ file should convince emacs to use Aspell.
+to the end of your ‘.emacs’ file should convince Emacs to use Aspell.
 
 3.3.3 With VIM
 --------------
@@ -952,16 +952,16 @@ email-margin
 
 The ‘markdown’ filter/mode skips over code and links in Markdown
 documents.  The mode also handles HTML via the ‘html’ filter which runs
-after the Markdown filer.
+after the Markdown filter.
 
 Properly parsing Markdown requires reading the entire document in at
 once, which doesn’t fit well into the existing filter framework so the
 filter parses the document a line at a time and makes a best guess when
-a line ends without enough information to correctly parse a a tag.  For
+a line ends without enough information to correctly parse a tag.  For
 example in the following:
      `This looks like inline code
 
-     But it's not, becuase the of the blank line.
+     But it's not, because of the blank line.
 the first line will be incorrectly skipped.
 
 markdown-multiline-tags
@@ -971,7 +971,7 @@ markdown-multiline-tags
      ‘--dont-markdown-multiline-tags’).
 
 markdown-skip-ref-labels
-     (boolean) Controls if ref lables are skipped.  For example, when
+     (boolean) Controls if ref labels are skipped.  For example, when
      this option is enabled ‘[ref]’ will be skipped over in:
           [link][ref]
 
@@ -1219,7 +1219,7 @@ per-conf
 
 keyboard
      (file) use this keyboard layout for suggesting possible words.
-     These spelling errors happen if a user accidently presses a key
+     These spelling errors happen if a user accidental presses a key
      next to the intended correct key.  The default is keyboard
      standard.  If you are creating documents, you may want to set it
      according to your particular type of keyboard.  If spellchecking
@@ -1435,8 +1435,8 @@ bad-spellers
      like the correct spelling it is bound to be found _somewhere_ on
      the list of 100 or more suggestions.
 
-When there is no soundslike or afffix compression is used then the modes
-have sligtly different meanings but, with the exception of
+When there is no soundslike or affix compression is used then the modes
+have slightly different meanings but, with the exception of
 ‘bad-spellers’, lower modes are faster and higher modes give better
 suggestions.  Some modes may give identical results depending on the
 language configuration.
@@ -1945,7 +1945,7 @@ otherwise.
 
 If you are using the ‘ucs-2’ or ‘ucs-4’ encoding then the string is
 expected to be either a 2 or 4 byte wide integer (respectively) and the
-‘_w’ macro vesion should be used:
+‘_w’ macro version should be used:
 
      int correct = aspell_speller_check_w(spell_checker, WORD, SIZE);
 
@@ -3254,7 +3254,7 @@ B.6 Upgrading from Aspell 0.60.7
 
 To prevent a potentially unbounded buffer over-read, Aspell no longer
 supports null-terminated UCS-2 and UCS-4 encoded strings with the
-original C API. Null-termianted 8-bit or UTF-8 encoded strings are still
+original C API. Null-terminated 8-bit or UTF-8 encoded strings are still
 supported, as are UCS-2 and UCS-4 encoded strings when the length is
 passed in.
 
@@ -3277,7 +3277,7 @@ an unbounded buffer over-read.
 
 If it is necessary to preserve binary compatibility with older versions
 of Aspell, the easiest thing would be to determine the length of the
-UCS-2/4 string—in bytes—and pass that in.  Due to an implemenation
+UCS-2/4 string—in bytes—and pass that in.  Due to an implementation
 detail, existing API functions can be made to work with null-terminated
 UCS-2/4 strings safely by passing in either ‘-2’ or ‘-4’ (corresponding
 to the width of the character type) as the size.  Doing so, however,
@@ -3575,8 +3575,31 @@ File: aspell.info,  Node: ChangeLog,  Next: Authors,  Prev: Installing,  Up: Top
 Appendix C ChangeLog
 ********************
 
-Changes from 0.60.7 to 0.68.8 (October 7, 2019)
-===============================================
+Changes from 0.60.8.1 to 0.60.8.2 (January 27, 2026)
+====================================================
+
+   • Improved compiler compatibility: Fixed Clang -Wstrict-prototypes
+     warnings for C interface, fixed new Clang warnings, fixed GCC 15
+     build issues, and added MSYS2 + MINGW64 compile fixes.
+   • Enhanced testing infrastructure with newer compiler versions,
+     including snapshots from both GCC and Clang, to catch future
+     problems before they make their way into distros.
+   • Fixed bug that caused aspell_speller_store_replacement to return
+     random values.
+   • Fixed typo in Texinfo filter option file.
+   • Various documentation updates and fixes.
+
+Changes from 0.60.8 to 0.60.8.1 (December 19, 2023)
+===================================================
+
+   • Fix memory leak in suggestion code introduced in 0.60.8.
+   • Various documentation fixes.
+   • Fix various warnings when compiling with -Wall.
+   • Fix two buffer overflows found by Google’s OSS-Fuzz.
+   • Other minor updates.
+
+Changes from 0.60.7 to 0.60.8 (October 12, 2019)
+================================================
 
    • Prevent a potentially unbounded buffer over-read by no longer
      supporting null-terminated UCS-2 and UCS-4 encoded strings with the
@@ -3603,7 +3626,7 @@ Changes from 0.60.7 to 0.68.8 (October 7, 2019)
    • The ‘clean’ option and command will no longer split a word.
    • Various documentation improvements.
    • Removal of several outdated appendices that don’t really belong in
-     the main manual.  Parts that are still relevent may eventually be
+     the main manual.  Parts that are still relevant may eventually be
      moved elsewhere, but for now they are available online at
      <http://aspell.net/0.60.7/man-html/>.
    • Fix various crashes and other problems found by Google’s OSS-Fuzz.
@@ -4676,7 +4699,7 @@ Tom Snyder
      Enhanced the SGML filter to also support skipping sgml tags such as
      "script" blocks.
 
-Kevin B. Hendricks (and Contributers)
+Kevin B. Hendricks (and Contributors)
      Wrote MySpell which is a simple spell checker library that supports
      affix compression.  Aspell affix compression code is based on his
      code.
@@ -4704,8 +4727,8 @@ their work into the Public Domain, and thus own the copyright to the
 translated text.  See the files ‘*.po’ in the ‘po’ directory for more
 details.
 
-The folowing people also contributed to the development of Aspell but do
-not own the Copyright to part of Aspell.
+The following people also contributed to the development of Aspell but
+do not own the Copyright to part of Aspell.
 
 Sergey Poznyakoff
      Added gettext support.
@@ -5713,72 +5736,72 @@ That’s all there is to it!
 
 Tag Table:
 Node: Top821
-Node: Introduction3486
-Node: Support7779
-Node: Basic Usage8177
-Node: Spellchecking Individual Files8519
-Node: Using Aspell as a Replacement for Ispell11541
-Ref: Differences From Ispell13516
-Node: Using Aspell with other Applications17206
+Node: Introduction3490
+Node: Support7782
+Node: Basic Usage8180
+Node: Spellchecking Individual Files8522
+Node: Using Aspell as a Replacement for Ispell11544
+Ref: Differences From Ispell13519
+Node: Using Aspell with other Applications17209
 Node: Customizing Aspell20161
 Node: Specifying Options21474
 Node: The Options27727
 Ref: Filter Options33862
-Node: Dumping Configuration Values47497
-Node: Notes on Various Options48251
-Node: Notes on Various Filters and Filter Modes48596
-Node: Notes on the Prefix Option48884
-Node: Notes on Typo-Analysis49788
-Node: Notes on the Different Suggestion Modes51938
-Node: Working With Dictionaries55235
-Node: Using aspell-import55838
-Node: How Aspell Selects an Appropriate Dictionary56679
-Node: Listing Available Dictionaries58852
-Node: Dumping the Contents of the Word List59301
-Node: Creating an Individual Word List59927
-Node: Working With Affix Info in Word Lists63448
-Node: Format of the Personal and Replacement Dictionaries67159
-Ref: Format of the Personal Dictionary67464
-Node: Using Multi Dictionaries68864
-Node: Dictionary Naming69778
-Node: AWLI files71064
-Node: Writing programs to use Aspell71856
-Node: Through the C API72425
-Node: Through A Pipe81484
-Node: Notes on Storing Replacement Pairs86756
-Node: Adding Support For Other Languages88146
-Node: The Language Data File89143
-Ref: data-encoding90590
-Node: Compiling the Word List94984
-Node: Phonetic Code95439
-Node: The Simple Soundslike111939
-Node: Replacement Tables113169
-Node: Affix Compression114163
-Node: Controlling the Behavior of Compound Words119488
-Ref: Controlling the Behavior of Run-together Words119664
-Node: Creating A New Character Set121046
-Node: Creating An Official Dictionary Package122291
-Node: Implementation Notes123032
-Node: Aspell Suggestion Strategy123295
-Node: Notes on 8-bit Characters125736
-Node: Installing129591
-Node: Generic Install Instructions130734
-Node: HTML Manuals and "make clean"132402
-Node: Curses Notes132960
-Node: Loadable Filter Notes134956
-Node: Using 32-Bit Dictionaries on a 64-Bit System135597
-Node: Upgrading from Aspell 0.60.7136679
-Node: Upgrading from Aspell 0.50139116
-Ref: Binary Compatibility140247
-Node: Upgrading from Aspell .33/Pspell .12141803
-Node: Upgrading from a Pre-0.50 snapshot144330
-Node: WIN32 Notes144854
-Ref: Win32-Directories150218
-Node: ChangeLog151741
-Node: Authors193450
-Node: Copying195732
-Node: GNU Free Documentation License196793
-Node: GNU Lesser General Public License219369
+Node: Dumping Configuration Values47492
+Node: Notes on Various Options48246
+Node: Notes on Various Filters and Filter Modes48591
+Node: Notes on the Prefix Option48879
+Node: Notes on Typo-Analysis49783
+Node: Notes on the Different Suggestion Modes51933
+Node: Working With Dictionaries55230
+Node: Using aspell-import55833
+Node: How Aspell Selects an Appropriate Dictionary56674
+Node: Listing Available Dictionaries58847
+Node: Dumping the Contents of the Word List59296
+Node: Creating an Individual Word List59922
+Node: Working With Affix Info in Word Lists63443
+Node: Format of the Personal and Replacement Dictionaries67154
+Ref: Format of the Personal Dictionary67459
+Node: Using Multi Dictionaries68859
+Node: Dictionary Naming69773
+Node: AWLI files71059
+Node: Writing programs to use Aspell71851
+Node: Through the C API72420
+Node: Through A Pipe81480
+Node: Notes on Storing Replacement Pairs86752
+Node: Adding Support For Other Languages88142
+Node: The Language Data File89139
+Ref: data-encoding90586
+Node: Compiling the Word List94980
+Node: Phonetic Code95435
+Node: The Simple Soundslike111935
+Node: Replacement Tables113165
+Node: Affix Compression114159
+Node: Controlling the Behavior of Compound Words119484
+Ref: Controlling the Behavior of Run-together Words119660
+Node: Creating A New Character Set121042
+Node: Creating An Official Dictionary Package122287
+Node: Implementation Notes123028
+Node: Aspell Suggestion Strategy123291
+Node: Notes on 8-bit Characters125732
+Node: Installing129587
+Node: Generic Install Instructions130730
+Node: HTML Manuals and "make clean"132398
+Node: Curses Notes132956
+Node: Loadable Filter Notes134952
+Node: Using 32-Bit Dictionaries on a 64-Bit System135593
+Node: Upgrading from Aspell 0.60.7136675
+Node: Upgrading from Aspell 0.50139113
+Ref: Binary Compatibility140244
+Node: Upgrading from Aspell .33/Pspell .12141800
+Node: Upgrading from a Pre-0.50 snapshot144327
+Node: WIN32 Notes144851
+Ref: Win32-Directories150215
+Node: ChangeLog151738
+Node: Authors194489
+Node: Copying196772
+Node: GNU Free Documentation License197833
+Node: GNU Lesser General Public License220409
 
 End Tag Table
 

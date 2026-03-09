@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+
+make -C test -f ../debian/tests/Makefile wide_test_valid

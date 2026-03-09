@@ -5,7 +5,7 @@
 GNU Aspell is a spell checker designed to eventually replace Ispell.
 It can either be used as a library or as an independent spell checker.
 
-Copyright © 2000-2019 Kevin Atkinson.
+Copyright © 2000-2026 Kevin Atkinson.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.1 or
@@ -15,10 +15,10 @@ copy of the license is included in the section entitled "GNU Free
 Documentation License". -->
 <!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>GNU Aspell 0.60.8: ChangeLog</title>
+<title>GNU Aspell 0.60.8.2: ChangeLog</title>
 
-<meta name="description" content="Aspell 0.60.8 spell checker user&rsquo;s manual.">
-<meta name="keywords" content="GNU Aspell 0.60.8: ChangeLog">
+<meta name="description" content="Aspell 0.60.8.2 spell checker user&rsquo;s manual.">
+<meta name="keywords" content="GNU Aspell 0.60.8.2: ChangeLog">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="makeinfo">
@@ -76,8 +76,33 @@ Next: <a href="Authors.html#Authors" accesskey="n" rel="next">Authors</a>, Previ
 <a name="ChangeLog-1"></a>
 <h2 class="appendix">Appendix C ChangeLog</h2>
 
-<a name="Changes-from-0_002e60_002e7-to-0_002e68_002e8-_0028October-7_002c-2019_0029"></a>
-<h3 class="heading">Changes from 0.60.7 to 0.68.8 (October 7, 2019)</h3>
+<a name="Changes-from-0_002e60_002e8_002e1-to-0_002e60_002e8_002e2-_0028January-27_002c-2026_0029"></a>
+<h3 class="heading">Changes from 0.60.8.1 to 0.60.8.2 (January 27, 2026)</h3>
+<ul>
+<li> Improved compiler compatibility: Fixed Clang -Wstrict-prototypes
+warnings for C interface, fixed new Clang warnings, fixed GCC 15 build
+issues, and added MSYS2 + MINGW64 compile fixes.
+</li><li> Enhanced testing infrastructure with newer compiler versions, including
+snapshots from both GCC and Clang, to catch future problems before they
+make their way into distros.
+</li><li> Fixed bug that caused aspell_speller_store_replacement to return
+random values.
+</li><li> Fixed typo in Texinfo filter option file.
+</li><li> Various documentation updates and fixes.
+</li></ul>
+
+<a name="Changes-from-0_002e60_002e8-to-0_002e60_002e8_002e1-_0028December-19_002c-2023_0029"></a>
+<h3 class="heading">Changes from 0.60.8 to 0.60.8.1 (December 19, 2023)</h3>
+<ul>
+<li> Fix memory leak in suggestion code introduced in 0.60.8.
+</li><li> Various documentation fixes.
+</li><li> Fix various warnings when compiling with -Wall.
+</li><li> Fix two buffer overflows found by Google&rsquo;s OSS-Fuzz.
+</li><li> Other minor updates.
+</li></ul>
+
+<a name="Changes-from-0_002e60_002e7-to-0_002e60_002e8-_0028October-12_002c-2019_0029"></a>
+<h3 class="heading">Changes from 0.60.7 to 0.60.8 (October 12, 2019)</h3>
 <ul>
 <li> Prevent a potentially unbounded buffer over-read by no longer
 supporting null-terminated UCS-2 and UCS-4 encoded strings with the
@@ -104,7 +129,7 @@ filters such as the Markdown filter may give incorrect results.
 </li><li> The <samp>clean</samp> option and command will no longer split a word.
 </li><li> Various documentation improvements.
 </li><li> Removal of several outdated appendices that don&rsquo;t really belong in the
-main manual.  Parts that are still relevent may eventually be moved
+main manual.  Parts that are still relevant may eventually be moved
 elsewhere, but for now they are available online at
 <a href="http://aspell.net/0.60.7/man-html/">http://aspell.net/0.60.7/man-html/</a>.
 </li><li> Fix various crashes and other problems found by Google&rsquo;s OSS-Fuzz.

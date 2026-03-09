@@ -1,0 +1,8 @@
+Tests: sanity-check.test,
+ filter-check.test,
+ wide-test-valid.test,
+ wide-test-invalid.test,
+ wide-test-invalid-but-ok.test,
+ cxx-warnings.test
+Depends: @, aspell-en, build-essential, libipc-system-simple-perl
+Restrictions: allow-stderr

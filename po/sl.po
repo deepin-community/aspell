@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aspell 0.60.8-pre2\n"
 "Report-Msgid-Bugs-To: kevina@gnu.org\n"
-"POT-Creation-Date: 2019-10-12 18:20-0400\n"
+"POT-Creation-Date: 2026-01-27 03:47-0500\n"
 "PO-Revision-Date: 2019-09-24 17:15+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
@@ -682,7 +682,9 @@ msgid "Invalid Option: %s"
 msgstr "Neveljavna možnost: %s"
 
 #: prog/aspell.cpp:322
-msgid " does not take any parameters."
+#, fuzzy, c-format
+#| msgid " does not take any parameters."
+msgid "'%s' does not take any parameters."
 msgstr " ne sme imeti parametrov."
 
 #: prog/aspell.cpp:335 prog/aspell.cpp:395
@@ -933,17 +935,6 @@ msgstr "    opusti, ustvari ali spoji glavni, osebni ali nadomestni slovar."
 #: prog/aspell.cpp:2874
 msgid "  <norm-form>      normalization form to use, either none, internal, or strict"
 msgstr "  <oblika-norm>      oblika normalizacije, vrednosti: none, internal ali strict"
-
-#: prog/aspell.cpp:2884
-#, c-format
-msgid ""
-"\n"
-"Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
-"\n"
-msgstr ""
-"\n"
-"Aspell %s.  Copyright 2000-2019 Kevin Atkinson.\n"
-"\n"
 
 #: prog/aspell.cpp:2918
 msgid ""
@@ -1201,7 +1192,7 @@ msgstr "Skupna dolžina besede s podatki zveni-kot presega 240 znakov."
 msgid "There must be at least one \"add\" line."
 msgstr "Obstajati mora vsaj ena vrstica \"add\"."
 
-#: modules/speller/default/suggest.cpp:1721
+#: modules/speller/default/suggest.cpp:1730
 msgid "one of ultra, fast, normal, slow, or bad-spellers"
 msgstr "eden od ultra, hitrih, normalnih, počasnih ali slabih črkovalnikov"
 
@@ -1375,3 +1366,17 @@ msgstr "način preverjanja dokumentov Texinfo"
 #: modules/filter/modes/url.amf:5
 msgid "mode to skip URL like constructs (default mode)"
 msgstr "način preskakanja konstruktov tipa URL (privzeti način)"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
+#~| "\n"
+#~ msgid ""
+#~ "\n"
+#~ "Aspell %s.  Copyright 2000-2023 by Kevin Atkinson.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Aspell %s.  Copyright 2000-2019 Kevin Atkinson.\n"
+#~ "\n"

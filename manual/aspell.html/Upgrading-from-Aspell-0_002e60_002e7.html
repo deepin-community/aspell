@@ -5,7 +5,7 @@
 GNU Aspell is a spell checker designed to eventually replace Ispell.
 It can either be used as a library or as an independent spell checker.
 
-Copyright © 2000-2019 Kevin Atkinson.
+Copyright © 2000-2026 Kevin Atkinson.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.1 or
@@ -15,10 +15,10 @@ copy of the license is included in the section entitled "GNU Free
 Documentation License". -->
 <!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>GNU Aspell 0.60.8: Upgrading from Aspell 0.60.7</title>
+<title>GNU Aspell 0.60.8.2: Upgrading from Aspell 0.60.7</title>
 
-<meta name="description" content="Aspell 0.60.8 spell checker user&rsquo;s manual.">
-<meta name="keywords" content="GNU Aspell 0.60.8: Upgrading from Aspell 0.60.7">
+<meta name="description" content="Aspell 0.60.8.2 spell checker user&rsquo;s manual.">
+<meta name="keywords" content="GNU Aspell 0.60.8.2: Upgrading from Aspell 0.60.7">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="makeinfo">
@@ -78,7 +78,7 @@ Next: <a href="Upgrading-from-Aspell-0_002e50.html#Upgrading-from-Aspell-0_002e5
 
 <p>To prevent a potentially unbounded buffer over-read, Aspell no longer
 supports null-terminated UCS-2 and UCS-4 encoded strings with the
-original C API.  Null-termianted 8-bit or UTF-8 encoded strings are
+original C API.  Null-terminated 8-bit or UTF-8 encoded strings are
 still supported, as are UCS-2 and UCS-4 encoded strings when the
 length is passed in.
 </p>
@@ -105,7 +105,7 @@ could result in an unbounded buffer over-read.
 <p>If it is necessary to preserve binary compatibility with older
 versions of Aspell, the easiest thing would be to determine the length
 of the UCS-2/4 string&mdash;in bytes&mdash;and pass that in.  Due to an
-implemenation detail, existing API functions can be made to work with
+implementation detail, existing API functions can be made to work with
 null-terminated UCS-2/4 strings safely by passing in either <code>-2</code>
 or <code>-4</code> (corresponding to the width of the character type) as the
 size.  Doing so, however, will cause a buffer over-read for unpatched

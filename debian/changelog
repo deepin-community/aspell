@@ -1,3 +1,80 @@
+aspell (0.60.8.2-3) unstable; urgency=medium
+
+  * debian/tests/control: Also depend on build-essential and
+    libipc-system-simple-perl.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue, 03 Feb 2026 21:37:08 +0100
+
+aspell (0.60.8.2-2) unstable; urgency=medium
+
+  * debian/tests: Add autopkgtest testsuite based on upstream tests.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue, 03 Feb 2026 10:58:10 +0100
+
+aspell (0.60.8.2-1) unstable; urgency=medium
+
+  * New upstream version 0.60.8.2.
+  * debian/gbp.conf: Add file with git-buildpackage defaults.
+  * debian/patches/:
+    - Remove patches applied upstream.
+    - 01_debctrl_filter.diff: Refresh.
+  * debian/control:
+    - Remove redundant "Rules-Requires-Root: no".
+    - debian/control: Remove redundant "Priority: optional".
+    - Bump Standards-Version. No changes required.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Thu, 29 Jan 2026 04:20:27 +0100
+
+aspell (0.60.8.1-6) unstable; urgency=medium
+
+  * debian/patches/1000_run-with-aspell.1.diff: Some editorial changes
+    for this man page. Thanks Bjarni Ingi Gislason (Closes: #1118439).
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 20 Oct 2025 12:53:50 +0200
+
+aspell (0.60.8.1-5) unstable; urgency=medium
+
+  * debian/watch: Upgrade to version 5.
+  * debian/copyright: Fix lintian old-fsf-address-in-copyright-file.
+  * debian/control: Bump Standards-Version to 4.7.2. No changes.
+  * Make some lintian overrides not arch-dependent.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Mon, 13 Oct 2025 17:58:51 +0200
+
+aspell (0.60.8.1-4) unstable; urgency=medium
+
+  * Borrow patch from upstream to deal with gcc15. Thanks Sergei
+    Trofimovich for the original patch (Closes: #1096334).
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue, 18 Feb 2025 00:45:46 +0100
+
+aspell (0.60.8.1-3) unstable; urgency=medium
+
+  * debian/prezip.1: Some improvements for this man page. Thanks Bjarni
+    Ingi Gislason (Closes: #1092073).
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Sun, 05 Jan 2025 16:25:36 +0100
+
+aspell (0.60.8.1-2) unstable; urgency=medium
+
+  * aspell.1: Remarks and editorial changes for this man page.
+    Thanks Bjarni Ingi Gislason (Closes: #1088846).
+  * aspell-import.1: Remarks and editorial changes for this man page.
+    Thanks Bjarni Ingi Gislason (Closes: #1088848).
+  * debian/control: Bump Standards-Version. No changes required.
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue, 03 Dec 2024 23:39:59 +0100
+
+aspell (0.60.8.1-1) unstable; urgency=medium
+
+  * New upstream version.
+    - Remove patches integrated in this upstream version:
+      + 1000-objstack-assert-that-the-alloc-size-will-fit-within-.patch
+      + 8000_Fix-aspell.1--manual-page.diff
+      + 8000_Fix-run-with-aspell.1-manual-page.diff
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Wed, 20 Dec 2023 19:39:49 +0100
+
 aspell (0.60.8-6) unstable; urgency=medium
 
   * debian/rules:
