@@ -3,13 +3,12 @@
 aspell \- interactive spell checker
 .SH SYNOPSIS
 .B aspell
-.I "[options] <command>"
-.br
+.RI [ options ] " <command>
 .SH "DESCRIPTION"
 .B aspell
 is a utility program that connects to the Aspell library so that it can
 function as an
-.B "ispell -a"
+.B "ispell \-a"
 replacement, as an independent spell checker, as a test utility to test
 out Aspell library features, and as a utility for managing dictionaries
 used by the library.
@@ -22,9 +21,9 @@ check your distro first for modified dictionaries, otherwise look here
 for base language dictionaries <http://aspell.net>.
 .PP
 The following information describes the commands and options used by the
-Aspell Utility.  
+Aspell Utility.
 .PP
-This manual page is maintained separately from the 
+This manual page is maintained separately from the
 official documentation so it may be out of date or incomplete.  The
 official documentation is maintained as a Texinfo manual.  See the
 .RB "`\|" aspell "\|'"
@@ -51,7 +50,7 @@ Spell\-check a single file.
 .TP
 \fBpipe\fR, \fB\-a\fR
 Run Aspell in
-.I "ispell -a"
+.I "ispell \-a"
 compatibility mode.
 .TP
 .B list
@@ -71,7 +70,7 @@ Output the soundslike equivalent of each word entered.
 .B munch
 Generate possible root words and affixes from an input list of words.
 .TP
-\fBexpand\fR [\fB1\-4\fR]
+\fBexpand\fR [\fB1\(en4\fR]
 Expands the affix flags of each affix compressed word entered.
 .TP
 \fBclean\fR [\fBstrict\fR]
@@ -87,13 +86,15 @@ one encoding
 .I <to>
 another.
 .TP
-\fBnorm\fR (\fI<norm\-map>\fR|\fI<from> <norm\-map> <to>\fR) [\fI<norm-form>\fR]
+\fBnorm\fR (\fI<norm\-map>\fR|\fI<from> <norm\-map> <to>\fR) \
+[\fI<norm-form>\fR]
 Perform Unicode normalization.
 .TP
 [\fBdump\fR] \fBdicts\fR|\fBfilters\fR|\fBmodes\fR
 Lists available dictionaries, filters, or modes.
 .TP
-\fBdump\fR|\fBcreate\fR|\fBmerge master\fR|\fBpersonal\fR|\fBrepl\fR \fI<wordlist>\fR
+\fBdump\fR|\fBcreate\fR|\fBmerge master\fR|\fBpersonal\fR|\fBrepl\fR \
+\fI<wordlist>\fR
 dump, create, or merge a master, personal, or replacement word list.
 .SH DICTIONARY OPTIONS
 The following options may be used to control which dictionaries to use
@@ -168,37 +169,38 @@ These options modify the behavior of the various filters.
 \fB\-\-add\-filter=\fR\fI<list>\fR, \fB\-\-rem\-filter=\fR\fI<list>\fR
 Add or remove a filter.
 .TP
-\fB\-\-add\-filter\-path=\fR\fI<paths>\fR, \fB\-\-rem\-filter\-path=\fR\fI<paths>\fR
+\fB\-\-add\-filter\-path=\fR\fI<paths>\fR, \
+\fB\-\-rem\-filter\-path=\fR\fI<paths>\fR
 Add or remove paths searched for filters.
 .TP
 \fB\-\-mode=\fR\fI<string>\fR, \fB\-e\fR, \fB\-H\fR, \fB\-t\fR, \fB\-n\fR
 Sets the filter mode.  \fIMode\fR is one of none, url, email, html, tex
-or nroff.  The alternative shortcut options are '-e' for email, '-H'
-for Html/Sgml, '-t' for Tex or '-n' for Nroff.
+or nroff.  The alternative shortcut options are '\-e' for email, '\-H'
+for Html/Sgml, '\-t' for Tex or '\-n' for Nroff.
 .TP
 \fB\-\-encoding=\fR\fI<string>\fR
 encoding the document is expected to be in.  The default depends on the
 current locale.
 .TP
 \fB\-\-add-email\-quote=\fR\fI<list>\fR, \fB\-\-rem-email\-quote=\fR\fI<list>\fR
-Add or Remove a list of email quote characters.
+Add or remove a list of email quote characters.
 .TP
 \fB\-\-email\-margin=\fR\fI<integer>\fR
 Number of chars that can appear before the quote char.
 .TP
 \fB\-\-add\-html\-check=\fR\fI<list>\fR, \fB\-\-rem\-html\-check=\fR\fI<list>\fR
 Add or remove a list of HTML attributes to always check.  For example,
-look inside alt= tags.
+look inside alt= attributes.
 .TP
 \fB\-\-add\-html\-skip=\fR\fI<list>\fR, \fB\-\-rem\-html\-skip=\fR\fI<list>\fR
-Add or remove a list of HTML attributes to always skip while spell
+Add or remove a list of HTML tags to always skip while spell
 checking.
 .TP
 \fB\-\-add\-sgml\-check=\fR\fI<list>\fR, \fB\-\-rem\-sgml\-check=\fR\fI<list>\fR
 Add or remove a list of SGML attributes to always check for spelling.
 .TP
 \fB\-\-add\-sgml\-skip=\fR\fI<list>\fR, \fB\-\-rem\-sgml\-skip=\fR\fI<list>\fR
-Add or remove a list of SGML attributes to always skip while spell
+Add or remove a list of SGML tags to always skip while spell
 checking.
 .TP
 \fB\-\-sgml\-extension=\fR\fI<list>\fR
@@ -207,8 +209,24 @@ SGML file extensions.
 \fB\-\-tex\-check\-comments\fR, \fB\-\-dont\-tex\-check\-comments\fR
 Check TeX comments.
 .TP
-\fB\-\-add\-tex\-command=\fR\fI<list>\fR, \fB\-\-rem\-tex\-command=\fR\fI<list>\fR
-Add or Remove a list of TeX commands.
+\fB\-\-add\-tex\-command=\fR\fI<list>\fR, \
+\fB\-\-rem\-tex\-command=\fR\fI<list>\fR
+Add or remove a list of TeX commands.
+.TP
+\fB\-\-add\-texinfo\-ignore=\fR\fI<list>\fR, \
+\fB\-\-rem\-texinfo\-ignore=\fR\fI<list>\fR
+Add or remove a list of Texinfo commands.
+.TP
+\fB\-\-add\-texinfo\-ignore\-env=\fR\fI<list>\fR, \
+\fB\-\-rem\-texinfo\-ignore\-env=\fR\fI<list>\fR
+Add or remove a list of Texinfo environments to ignore.
+.TP
+\fB\-\-context\-visible\-first, \fB\-\-dont\-context\-visible\-first
+Switch the context which should be visible to Aspell.
+.TP
+\fB\-\-add\-context\-delimiters=\fR\fI<list>\fR, \
+\fB\-\-rem\-context\-delimiters=\fR\fI<list>\fR
+Add or remove pairs of delimiters.
 .SH RUN\-TOGETHER WORD OPTIONS
 These may be used to control the behavior of run\-together words.
 .TP
@@ -252,7 +270,7 @@ These options are part of the
 .I aspell
 Utility and work independently of the library.
 .TP
-\fB--backup\fR, \fB\-\-dont\-backup\fR, \fB\-b\fR, \fB\-x\fR
+\fB\-\-backup\fR, \fB\-\-dont\-backup\fR, \fB\-b\fR, \fB\-x\fR
 The aspell utility creates a backup file by making a copy and appending
 .I .bak
 to file name.  This only applies when the command is
@@ -296,21 +314,23 @@ default global configuration file is
 .I "/etc/aspell.conf"
 or another file specified by option \fI\-\-conf\fR and is checked first.
 The default per user configuration file
-.I "~/.aspell.conf"
+.I "\%\(ti/.aspell.conf"
 located in the
 .B "$HOME"
-directory (or another file specified by option \fI\-\-per\-conf\fR) is
-checked next and overrides options set in the global config file.
+directory
+(or another file specified by option \fI\-\-per\-conf\fR)
+is checked next and overrides options set in the global config file.
 Options specified at either the command line or via an environmental
 variable override those specified by either configuration file.
 .PP
 Each line of the configuration file has the format:
 .PP
 .RS
-\fBoption\fR \fI[value]\fR
+\fBoption\fR
+.RI [ value ]
 .RE
 .PP
-where 
+where
 .B option
 is any one of the standard library options above without the leading
 dashes.  For example the following line will set the default language to
@@ -327,7 +347,6 @@ with a '#' as anything from a '#' to a newline is ignored.  Blank lines
 are also allowed.  The \fI/etc/aspell.conf\fR file is a good example of
 how to set these options and the Aspell Manual has more detailed info.
 .SH SEE ALSO
-.PP
 .BR aspell\-import (1),
 .BR prezip\-bin (1),
 .BR run\-with\-aspell (1),

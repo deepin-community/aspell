@@ -742,7 +742,7 @@ as a singly or doubly linked list.  It is defined in ‘basic_list.hpp’.
 13.3 StringMap
 ==============
 
-‘StringMap’ is a associative array for strings.  You should try to use
+‘StringMap’ is an associative array for strings.  You should try to use
 this when ever possible to avoid code bloat.  It is defined in
 ‘string_map.hpp’.
 
@@ -803,7 +803,7 @@ converted from the pod source.
    The info array contains information on how to process the info in
 ‘mk-src.pl’.  It has the following layout
 
-    <catagory> => options => []
+    <category> => options => []
                   groups => [] # if undef than anything is accepted
                   creates_type => "" # the object will create a new type
                                      # as specified
@@ -832,7 +832,7 @@ converted from the pod source.
     returns alt type: the constructor returns some type other than
       the object from which it is a member of
     no native: do not attempt to create a native implementation
-    treat as object: treat as a object rather than a pointer
+    treat as object: treat as an object rather than a pointer
    The ‘%info’ structure is initialized as follows:
     our %info =
     (
@@ -943,7 +943,7 @@ following format:
     where each tree represents an entry in mk-src.in.
     The following two options are always provided:
       name: the name of the entry
-      type: the catagory or type name
+      type: the category or type name
     Additional options are the same as specified in %info
 
 14.5 MKSrc::Create
@@ -1733,13 +1733,13 @@ Ref: Reinstall Aspell24466
 Ref: Test Filter Installed24490
 Node: Filter Modes24927
 Node: Data Structures28669
-Node: Mk-Src Script30094
-Node: How It All Works39473
-Node: Part 1 - Compiled Dictionary Format40270
-Node: Part 2 - Quickly Finding Similar Soundslike43245
-Node: Part 349321
-Node: Copying49495
-Node: GNU Free Documentation License50070
+Node: Mk-Src Script30095
+Node: How It All Works39475
+Node: Part 1 - Compiled Dictionary Format40272
+Node: Part 2 - Quickly Finding Similar Soundslike43247
+Node: Part 349323
+Node: Copying49497
+Node: GNU Free Documentation License50072
 
 End Tag Table
 

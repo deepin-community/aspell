@@ -82,14 +82,15 @@ build_triplet = @build@
 host_triplet = @host@
 target_triplet = @target@
 @PSPELL_COMPATIBILITY_TRUE@am__append_1 = libpspell.la
+@W_ALL_ERROR_TRUE@am__append_2 = $(EXTRA_CXXFLAGS)
 bin_PROGRAMS = word-list-compress$(EXEEXT) aspell$(EXEEXT) \
 	prezip-bin$(EXEEXT)
-@COMPILE_IN_FILTERS_TRUE@am__append_2 = ${optfiles}
+@COMPILE_IN_FILTERS_TRUE@am__append_3 = ${optfiles}
 
 ### Add your filter sources here,
 ### starting with file containing filter class definition followed by
 ### file containing filter member implementation.
-@COMPILE_IN_FILTERS_TRUE@am__append_3 = \
+@COMPILE_IN_FILTERS_TRUE@am__append_4 = \
 @COMPILE_IN_FILTERS_TRUE@  modules/filter/email.cpp\
 @COMPILE_IN_FILTERS_TRUE@  modules/filter/tex.cpp\
 @COMPILE_IN_FILTERS_TRUE@  modules/filter/sgml.cpp\
@@ -98,9 +99,9 @@ bin_PROGRAMS = word-list-compress$(EXEEXT) aspell$(EXEEXT) \
 @COMPILE_IN_FILTERS_TRUE@  modules/filter/nroff.cpp\
 @COMPILE_IN_FILTERS_TRUE@  modules/filter/texinfo.cpp
 
-@COMPILE_IN_FILTERS_FALSE@am__append_4 = ${optfiles}
-@PSPELL_COMPATIBILITY_TRUE@am__append_5 = scripts/pspell-config 
-@PSPELL_COMPATIBILITY_TRUE@am__append_6 = scripts/pspell-config
+@COMPILE_IN_FILTERS_FALSE@am__append_5 = ${optfiles}
+@PSPELL_COMPATIBILITY_TRUE@am__append_6 = scripts/pspell-config 
+@PSPELL_COMPATIBILITY_TRUE@am__append_7 = scripts/pspell-config
 subdir = .
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
@@ -537,7 +538,7 @@ CURSES_LIB = @CURSES_LIB@
 CXX = @CXX@
 CXXCPP = @CXXCPP@
 CXXDEPMODE = @CXXDEPMODE@
-CXXFLAGS = @CXXFLAGS@
+CXXFLAGS = @CXXFLAGS@ $(am__append_2)
 CYGPATH_W = @CYGPATH_W@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
@@ -758,7 +759,7 @@ libaspell_la_SOURCES = common/cache.cpp common/string.cpp \
 	lib/dummy.cpp lib/new_filter.cpp lib/new_fmode.cpp \
 	lib/string_list-c.cpp lib/find_speller.cpp lib/speller-c.cpp \
 	lib/string_pair_enumeration-c.cpp lib/new_checker.cpp \
-	modules/filter/url.cpp $(am__append_3)
+	modules/filter/url.cpp $(am__append_4)
 libaspell_la_LIBADD = $(LTLIBINTL) $(PTHREAD_LIB)
 @INCREMENTED_SONAME_FALSE@libaspell_la_LDFLAGS = -version-info 18:1:3 -no-undefined
 @INCREMENTED_SONAME_TRUE@libaspell_la_LDFLAGS = -version-info 19:1:3 -no-undefined
@@ -769,8 +770,8 @@ word_list_compress_SOURCES = prog/compress.c
 aspell_SOURCES = prog/aspell.cpp prog/check_funs.cpp prog/checker_string.cpp
 aspell_LDADD = libaspell.la $(CURSES_LIB)
 prezip_bin_SOURCES = prog/prezip.c
-static_optfiles = modules/filter/url-filter.info $(am__append_2)
-dynamic_optfiles = $(am__append_4)
+static_optfiles = modules/filter/url-filter.info $(am__append_3)
+dynamic_optfiles = $(am__append_5)
 
 ###
 ### To add a new filter follow the instruction that begin with '###'
@@ -834,7 +835,7 @@ fltfiles = \
 @COMPILE_IN_FILTERS_FALSE@texinfo_filter_la_LDFLAGS = ${filter_ldflags}
 opt_DATA = $(dynamic_optfiles)
 filter_DATA = $(fltfiles)
-CLEANFILES = gen/static_filters.src.cpp gen/dirs.h $(am__append_6) \
+CLEANFILES = gen/static_filters.src.cpp gen/dirs.h $(am__append_7) \
 	scripts/run-with-aspell
 
 ########################################################################
@@ -842,7 +843,7 @@ CLEANFILES = gen/static_filters.src.cpp gen/dirs.h $(am__append_6) \
 # Scripts
 #
 bin_SCRIPTS = scripts/run-with-aspell scripts/aspell-import \
-	scripts/prezip scripts/preunzip scripts/precat $(am__append_5)
+	scripts/prezip scripts/preunzip scripts/precat $(am__append_6)
 pkgdata_SCRIPTS = scripts/spell scripts/ispell
 mksrc = \
  auto/mk-src.in auto/mk-src.pl auto/mk-doc.pl\
@@ -2050,6 +2051,11 @@ uninstall-am: uninstall-binPROGRAMS uninstall-binSCRIPTS \
 	uninstall-pspell_includeHEADERS
 
 
+@W_ALL_ERROR_TRUE@warning-settings.mk: ${srcdir}/test/warning-settings.cpp
+@W_ALL_ERROR_TRUE@	$(CXX) ${srcdir}/test/warning-settings.cpp -o warning-settings
+@W_ALL_ERROR_TRUE@	./warning-settings > warning-settings.mk
+@W_ALL_ERROR_TRUE@ include warning-settings.mk
+
 # settings.h added as a dependency so it will get recreated if
 #   the COMPILE_IN_FILTERS option changes
 gen/static_filters.src.cpp: ${static_optfiles} gen/mk-static-filter.pl gen/settings.h
@@ -2092,8 +2098,9 @@ maintainer-clean-local:
 
 dist-hook:
 	mkdir $(distdir)/maintainer
-	cp autogen config-opt config-debug TODO FIXMEs README.md sanity-check.sh \
+	cp autogen.sh config-opt config-debug TODO FIXMEs README.md sanity-check.sh \
            $(distdir)/maintainer
+	cp -a autogen $(distdir)/maintainer
 
 distcheck: dist
 	tar xfv $(distdir).tar.gz

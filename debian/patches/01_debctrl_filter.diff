@@ -3,7 +3,7 @@
 ## 
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -166,6 +166,7 @@ dynamic_optfiles =
+@@ -174,6 +174,7 @@ dynamic_optfiles =
  
  ### Add the .info file your filter comes with
  optfiles = \
@@ -11,7 +11,7 @@
    modules/filter/email-filter.info\
    modules/filter/tex-filter.info\
    modules/filter/sgml-filter.info\
-@@ -177,6 +178,7 @@ optfiles = \
+@@ -185,6 +186,7 @@ optfiles = \
  
  ### Add all your aspell mode files ###
  fltfiles = \
@@ -19,7 +19,7 @@
    modules/filter/modes/html.amf \
    modules/filter/modes/sgml.amf \
    modules/filter/modes/markdown.amf \
-@@ -198,6 +200,7 @@ static_optfiles += ${optfiles}
+@@ -206,6 +208,7 @@ static_optfiles += ${optfiles}
  ### starting with file containing filter class definition followed by
  ### file containing filter member implementation.
  libaspell_la_SOURCES +=\
@@ -27,7 +27,7 @@
    modules/filter/email.cpp\
    modules/filter/tex.cpp\
    modules/filter/sgml.cpp\
-@@ -213,10 +216,15 @@ filter_ldflags = -module -avoid-version
+@@ -221,10 +224,15 @@ filter_ldflags = -module -avoid-version
  
  ### Add name of filter library containing your filter. Name always
  ### must look like lib<filtername>-filter.la see development manual
@@ -44,7 +44,7 @@
  email_filter_la_SOURCES = modules/filter/email.cpp
  email_filter_la_LIBADD = libaspell.la 
  email_filter_la_LDFLAGS  = ${filter_ldflags}
-@@ -448,4 +456,3 @@ EXTRA_DIST += \
+@@ -457,4 +465,3 @@ EXTRA_DIST += \
    test/suggest/run-batch \
    test/wide_test_invalid.c \
    test/wide_test_valid.c
@@ -83,7 +83,7 @@
 +
 +  using namespace acommon;
 +
-+  class DebctrlFilter : public IndividualFilter 
++  class DebctrlFilter : public IndividualFilter
 +  {
 +    bool prev_newline;
 +    bool in_field;
@@ -94,15 +94,15 @@
 +    void process(FilterChar * &, FilterChar * &);
 +  };
 +
-+  PosibErr<bool> DebctrlFilter::setup(Config * opts) 
++  PosibErr<bool> DebctrlFilter::setup(Config * opts)
 +  {
 +    name_ = "debctrl-filter";
 +    order_num_ = 0.90;
 +    reset();
 +    return true;
 +  }
-+  
-+  void DebctrlFilter::reset() 
++
++  void DebctrlFilter::reset()
 +  {
 +    prev_newline = true;
 +    in_field = false;
@@ -136,9 +136,9 @@
 +  }
 +}
 +
-+C_EXPORT 
++C_EXPORT
 +IndividualFilter * new_aspell_debctrl_filter() {
-+  return new DebctrlFilter;                                
++  return new DebctrlFilter;
 +}
 --- /dev/null
 +++ b/modules/filter/modes/debctrl.amf

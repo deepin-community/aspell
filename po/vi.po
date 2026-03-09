@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aspell 0.60.7\n"
 "Report-Msgid-Bugs-To: kevina@gnu.org\n"
-"POT-Creation-Date: 2019-10-12 18:20-0400\n"
+"POT-Creation-Date: 2026-01-27 03:47-0500\n"
 "PO-Revision-Date: 2012-03-13 14:59+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -690,7 +690,9 @@ msgid "Invalid Option: %s"
 msgstr "Tùy chọn không hợp lệ: %s"
 
 #: prog/aspell.cpp:322
-msgid " does not take any parameters."
+#, fuzzy, c-format
+#| msgid " does not take any parameters."
+msgid "'%s' does not take any parameters."
 msgstr " không chấp nhận tham số."
 
 #: prog/aspell.cpp:335 prog/aspell.cpp:395
@@ -953,21 +955,6 @@ msgstr ""
 "  <norm-form>      _kiểu tiêu chuẩn hóa_ cần dùng, hoặc none (không có),\n"
 "\tinternal (nội bộ), hay strict (chính xác)"
 
-#: prog/aspell.cpp:2884
-#, fuzzy, c-format
-#| msgid ""
-#| "\n"
-#| "Aspell %s.  Copyright 2000-2011 by Kevin Atkinson.\n"
-#| "\n"
-msgid ""
-"\n"
-"Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
-"\n"
-msgstr ""
-"\n"
-"Aspell %s.  Tác quyền © năm 2000-2011 của Kevin Atkinson.\n"
-"\n"
-
 #: prog/aspell.cpp:2918
 msgid ""
 "Available Dictionaries:\n"
@@ -1227,7 +1214,7 @@ msgstr "Tổng độ dài từ, gồm dữ liệu soundslike (nghe như), hơn 2
 msgid "There must be at least one \"add\" line."
 msgstr "Cần phải có ít nhất một dòng kiểu « thêm » (add)."
 
-#: modules/speller/default/suggest.cpp:1721
+#: modules/speller/default/suggest.cpp:1730
 msgid "one of ultra, fast, normal, slow, or bad-spellers"
 msgstr "một của người chính tả rất tốt, nhanh, thường, chạm hay tệ."
 
@@ -1407,6 +1394,20 @@ msgstr "chế độ để kiểm tra tài liệu Texinfo"
 #: modules/filter/modes/url.amf:5
 msgid "mode to skip URL like constructs (default mode)"
 msgstr "chế độ để bỏ qua đồ kiểu địa chỉ Mạng (chế độ mặc định)"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "Aspell %s.  Copyright 2000-2011 by Kevin Atkinson.\n"
+#~| "\n"
+#~ msgid ""
+#~ "\n"
+#~ "Aspell %s.  Copyright 2000-2023 by Kevin Atkinson.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Aspell %s.  Tác quyền © năm 2000-2011 của Kevin Atkinson.\n"
+#~ "\n"
 
 #~ msgid "edit distance to use, override sug-mode default"
 #~ msgstr "sửa tầm cần dùng, có quyền cao hơn chế độ góp ý mặc định"

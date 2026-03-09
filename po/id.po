@@ -2,24 +2,27 @@
 # Copyright (C) 2008 Kevin Atkinson
 # This file is distributed under the same license as the aspell package.
 # Arif E. Nugroho <arif_endro@yahoo.com>, 2008.
+# Andika Triwidada <andika@gmail.com>, 2021, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: aspell 0.60.6\n"
+"Project-Id-Version: aspell 0.60.8.1\n"
 "Report-Msgid-Bugs-To: kevina@gnu.org\n"
-"POT-Creation-Date: 2019-10-12 18:20-0400\n"
-"PO-Revision-Date: 2008-11-11 10:15+0700\n"
-"Last-Translator: Arif E. Nugroho <arif_endro@yahoo.com>\n"
+"POT-Creation-Date: 2026-01-27 03:47-0500\n"
+"PO-Revision-Date: 2023-12-06 09:45+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: common/info.cpp:232
 msgid "a number between 0 and 1"
-msgstr "sebuah angka diantara 0 dan 1"
+msgstr "sebuah angka di antara 0 dan 1"
 
 #: common/info.cpp:569
 msgid "in the form \"<name> <value>\""
@@ -45,7 +48,7 @@ msgstr "daftar"
 #. * values and should not be translated.
 #: common/config.cpp:988
 msgid "either \"true\" or \"false\""
-msgstr "baik \"benar\" atau \"salah\""
+msgstr "baik \"true (benar)\" atau \"false (salah)\""
 
 #: common/config.cpp:1007
 msgid "a positive integer"
@@ -78,7 +81,7 @@ msgstr ""
 
 #: common/config.cpp:1296
 msgid "ASPELL_CONF env var"
-msgstr "ASPELL_CONF env var"
+msgstr "var ling ASPELL_CONF"
 
 #. TRANSLATORS: The remaining strings in config.cpp should be kept
 #. under 50 characters, begin with a lower case character and not
@@ -125,7 +128,7 @@ msgstr "kamus ekstra untuk digunakan"
 
 #: common/config.cpp:1403
 msgid "files with list of extra words to accept"
-msgstr ""
+msgstr "berkas dengan daftar kata ekstra untuk diterima"
 
 #: common/config.cpp:1405
 msgid "location for personal files"
@@ -227,10 +230,8 @@ msgid "minimal length of interior words"
 msgstr "jumlah minimal dari kata interior"
 
 #: common/config.cpp:1461
-#, fuzzy
-#| msgid "consider run-together words legal"
 msgid "consider camel case words legal"
-msgstr "pertimbangkan kata jalan-bersama legal"
+msgstr "pertimbangkan legal kata-kata camel case"
 
 #: common/config.cpp:1463
 msgid "save replacement pairs on save all"
@@ -354,10 +355,9 @@ msgid "The Unicode code point U+%04X is unsupported."
 msgstr "Kode unicode menunjuk ke U+%04X tidak didukung."
 
 #: common/convert.cpp:887
-#, fuzzy, c-format
-#| msgid "Invalid UTF-8 sequence at position %d."
+#, c-format
 msgid "Invalid UTF-8 sequence at position %ld."
-msgstr "Urutan UTF-8 di posisi %d tidak valid."
+msgstr "Urutan UTF-8 di posisi %ld tidak valid."
 
 #: common/errors.cpp:27
 msgid "Operation Not Supported: %what:1"
@@ -468,7 +468,7 @@ msgstr "Bahasa \"%lang:1\" tidak didukung."
 #: common/errors.cpp:259
 #, c-format
 msgid "No word lists can be found for the language \"%lang:1\"."
-msgstr "Tidak ada daftar kata yang dapat ditemukan untuk bahasa \"%lang:1\""
+msgstr "Tidak ada daftar kata yang dapat ditemukan untuk bahasa \"%lang:1\"."
 
 #: common/errors.cpp:267
 #, c-format
@@ -612,7 +612,7 @@ msgstr "\"%mode:1\" error"
 #: common/errors.cpp:627
 #, c-format
 msgid "Unknown mode: \"%mode:1\"."
-msgstr "Mode tidak diketahui: \"%mode:1\""
+msgstr "Mode tidak diketahui: \"%mode:1\"."
 
 #: common/errors.cpp:635
 #, c-format
@@ -673,10 +673,8 @@ msgid "enter Nroff mode."
 msgstr "masuk mode Nroff."
 
 #: prog/aspell.cpp:209
-#, fuzzy
-#| msgid "enter Nroff mode."
 msgid "enter Markdown mode."
-msgstr "masuk mode Nroff."
+msgstr "masuk mode Markdown."
 
 #: prog/aspell.cpp:315
 #, c-format
@@ -684,8 +682,9 @@ msgid "Invalid Option: %s"
 msgstr "Opsi tidak valid: %s"
 
 #: prog/aspell.cpp:322
-msgid " does not take any parameters."
-msgstr " tidak mengambil parameter apapun."
+#, c-format
+msgid "'%s' does not take any parameters."
+msgstr "'%s' tidak mengambil parameter apa pun."
 
 #: prog/aspell.cpp:335 prog/aspell.cpp:395
 #, c-format
@@ -743,10 +742,9 @@ msgid "Invalid keymapping: %s"
 msgstr "Pemetaan kunci tidak valid: %s"
 
 #: prog/aspell.cpp:1018
-#, fuzzy, c-format
-#| msgid "\"%expression:1\" is not a valid regular expression."
+#, c-format
 msgid "\"%s\" is not a regular file"
-msgstr "\"%expression:1\" bukan sebuah ekspresi regular yang valid."
+msgstr "\"%s\" bukan sebuah berkas regular"
 
 #: prog/aspell.cpp:1029
 #, c-format
@@ -844,10 +842,8 @@ msgid "  help             display a detailed help message"
 msgstr "  help             tampilkan sebuah pesan bantuan lengkap"
 
 #: prog/aspell.cpp:2833
-#, fuzzy
-#| msgid "  -c|check <file>  to check a file"
 msgid "  -c|check <file>  spellchecks a file"
-msgstr "  -c|check <file>  untuk memeriksa sebuah berkas"
+msgstr "  -c|check <file>  periksa ejaan sebuah berkas"
 
 #: prog/aspell.cpp:2834
 msgid "  -a|pipe          \"ispell -a\" compatibility mode"
@@ -901,7 +897,7 @@ msgstr ""
 
 #: prog/aspell.cpp:2859
 msgid "  filter           filters input as if it was being spellchecked"
-msgstr ""
+msgstr "  filter           filter masukan seolah sedang diperiksa ejaannya"
 
 #: prog/aspell.cpp:2860
 msgid "  -v|version       prints a version line"
@@ -944,21 +940,6 @@ msgstr "    dumps, buat atau gabungkan sebuah master, personal, atau kamus pengg
 #: prog/aspell.cpp:2874
 msgid "  <norm-form>      normalization form to use, either none, internal, or strict"
 msgstr "  <bentuk-normal>  normalisasi dari bentuk untuk menggunakan baik, none, internal, atau strict"
-
-#: prog/aspell.cpp:2884
-#, fuzzy, c-format
-#| msgid ""
-#| "\n"
-#| "Aspell %s.  Copyright 2000-2004 by Kevin Atkinson.\n"
-#| "\n"
-msgid ""
-"\n"
-"Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
-"\n"
-msgstr ""
-"\n"
-"Aspell %s.  Hak Cipta 2000-2004 oleh Kevin Atkinson.\n"
-"\n"
 
 #: prog/aspell.cpp:2918
 msgid ""
@@ -1191,7 +1172,7 @@ msgstr "Mungkin jumlah tidak benar."
 
 #: modules/speller/default/readonly_ws.cpp:362
 msgid "Incompatible hash function."
-msgstr ""
+msgstr "Fungsi hash yang tidak kompatibel."
 
 #: modules/speller/default/readonly_ws.cpp:440
 msgid "Wrong endian order."
@@ -1217,7 +1198,7 @@ msgstr "Panjang total kata, dengan data soundslike, lebih besar dari 240 karakte
 msgid "There must be at least one \"add\" line."
 msgstr "Disana harus ada paling tidak satu baris \"add\"."
 
-#: modules/speller/default/suggest.cpp:1721
+#: modules/speller/default/suggest.cpp:1730
 msgid "one of ultra, fast, normal, slow, or bad-spellers"
 msgstr "salah satu dari ultra, fast, normal, slow, atau bad-spellers"
 
@@ -1258,15 +1239,15 @@ msgstr "tukar dapat dilihat dan teks tidak terlihat"
 
 #: modules/filter/email-filter.info:7
 msgid "filter for skipping quoted text in email messages"
-msgstr "penyaring untuk melewatkan teks terquote dalam pesan email"
+msgstr "penyaring untuk melewati teks kutipan dalam pesan surel"
 
 #: modules/filter/email-filter.info:13
 msgid "email quote characters"
-msgstr "karakter quote email"
+msgstr "karakter kutip surel"
 
 #: modules/filter/email-filter.info:21
 msgid "num chars that can appear before the quote char"
-msgstr "jumlah karakter yang dapat muncul sebelum karakter quote"
+msgstr "jumlah karakter yang dapat muncul sebelum karakter kutip"
 
 #: modules/filter/html-filter.info:9
 msgid "filter for dealing with HTML documents"
@@ -1278,29 +1259,27 @@ msgstr "atribut HTML untuk selalu diperiksa"
 
 #: modules/filter/html-filter.info:21
 msgid "HTML tags to always skip the contents of"
-msgstr "tags HTML untuk selalu dilewatkan isi dari"
+msgstr "tag HTML untuk selalu dilewatkan isinya"
 
 #: modules/filter/markdown-filter.info:8
-#, fuzzy
-#| msgid "filter for dealing with Texinfo documents"
 msgid "filter for Markdown/CommonMark documents"
-msgstr "penyaring untuk menghadapi dengan dokumen Texinfo"
+msgstr "penyaring untuk dokumen Markdown/CommonMark"
 
 #: modules/filter/markdown-filter.info:14
 msgid "skip link labels in link reference definitions"
-msgstr ""
+msgstr "lewati label tautan dalam definisi referensi tautan"
 
 #: modules/filter/markdown-filter.info:20
 msgid "support tags that span multiple lines outside of HTML blocks"
-msgstr ""
+msgstr "tag dukungan yang membentang beberapa baris di luar blok HTML"
 
 #: modules/filter/markdown-filter.info:26
 msgid "HTML tags that start an HTML block that allows blank lines"
-msgstr ""
+msgstr "tag HTML yang memulai blok HTML yang memungkinkan baris kosong"
 
 #: modules/filter/markdown-filter.info:34
 msgid "HTML tags that start an HTML block that ends with a blank line"
-msgstr ""
+msgstr "tag HTML yang memulai blok HTML yang diakhiri dengan baris kosong"
 
 #: modules/filter/nroff-filter.info:7
 msgid "filter for dealing with Nroff documents"
@@ -1312,11 +1291,11 @@ msgstr "penyaring untuk menghadapi dengan dokumen generik SGML/XML"
 
 #: modules/filter/sgml-filter.info:15
 msgid "SGML attributes to always check"
-msgstr "atribut SGML ke selalu periksa"
+msgstr "atribut SGML untuk selalu diperiksa"
 
 #: modules/filter/sgml-filter.info:20
 msgid "SGML tags to always skip the contents of"
-msgstr "tag SGML untuk selalu melewatkan isi dari"
+msgstr "tag SGML untuk selalu dilewatkan isinya"
 
 #: modules/filter/tex-filter.info:7
 msgid "filter for dealing with TeX/LaTeX documents"
@@ -1332,15 +1311,15 @@ msgstr "perintah TeX"
 
 #: modules/filter/texinfo-filter.info:7
 msgid "filter for dealing with Texinfo documents"
-msgstr "penyaring untuk menghadapi dengan dokumen Texinfo"
+msgstr "penyaring untuk menangani dokumen Texinfo"
 
 #: modules/filter/texinfo-filter.info:13
 msgid "Texinfo commands to ignore the parameters of"
-msgstr "Perintah texinfo untuk mengabaikan parameter dari"
+msgstr "Perintah Texinfo untuk mengabaikan parameter dari"
 
 #: modules/filter/texinfo-filter.info:41
 msgid "Texinfo environments to ignore"
-msgstr "lingkungan texinfo untuk diabaikan"
+msgstr "lingkungan Texinfo untuk diabaikan"
 
 #: modules/filter/url-filter.info:7
 msgid "filter to skip URL like constructs"
@@ -1348,7 +1327,7 @@ msgstr "penyaring untuk melewatkan URL seperti konstruk"
 
 #: modules/filter/modes/ccpp.amf:8
 msgid "mode for checking C++ comments and string literals"
-msgstr "mode untuk pemeriksaan komentar C++ dan string literals"
+msgstr "mode untuk pemeriksaan komentar C++ dan string literal"
 
 #: modules/filter/modes/comment.amf:5
 msgid "mode to check any lines starting with a #"
@@ -1356,17 +1335,15 @@ msgstr "mode untuk pemeriksaan baris apapun diawali dengan sebuah #"
 
 #: modules/filter/modes/email.amf:5
 msgid "mode for skipping quoted text in email messages"
-msgstr "mode untuk melewatkan quoted teks dalam pesan email"
+msgstr "mode untuk melewati teks kutipan dalam pesan surel"
 
 #: modules/filter/modes/html.amf:10
 msgid "mode for checking HTML documents"
 msgstr "mode untuk pemeriksaan dokumen HTML"
 
 #: modules/filter/modes/markdown.amf:9
-#, fuzzy
-#| msgid "mode for checking Nroff documents"
 msgid "mode for checking Markdown/CommonMark documents"
-msgstr "mode untuk pemeriksaan dokumen Nroff"
+msgstr "mode untuk pemeriksaan dokumen Markdown/CommonMark"
 
 #: modules/filter/modes/none.amf:5
 msgid "mode to disable all filters"
@@ -1396,8 +1373,11 @@ msgstr "mode untuk pemeriksaan dokumen Texinfo"
 msgid "mode to skip URL like constructs (default mode)"
 msgstr "mode untuk melewatkan URL seperti konstruk (mode baku)"
 
-#~ msgid "edit distance to use, override sug-mode default"
-#~ msgstr "ubah jarak untuk digunakan, override mode-saran baku"
-
-#~ msgid "Sorry \"filter\" is currently unimplemented.\n"
-#~ msgstr "Maaf \"filter\" saat ini tidak terimplementasi.\n"
+#~ msgid ""
+#~ "\n"
+#~ "Aspell %s.  Copyright 2000-2023 by Kevin Atkinson.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Aspell %s.  Hak Cipta 2000-2023 oleh Kevin Atkinson.\n"
+#~ "\n"

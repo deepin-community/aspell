@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aspell 0.60\n"
 "Report-Msgid-Bugs-To: kevina@gnu.org\n"
-"POT-Creation-Date: 2019-10-12 18:20-0400\n"
+"POT-Creation-Date: 2026-01-27 03:47-0500\n"
 "PO-Revision-Date: 2005-04-04 10:55-0700\n"
 "Last-Translator: Steven Michael Murphy <murf@e-tools.com>\n"
 "Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
@@ -791,8 +791,8 @@ msgid "Invalid Option: %s"
 msgstr ""
 
 #: prog/aspell.cpp:322
-#, fuzzy
-msgid " does not take any parameters."
+#, fuzzy, c-format
+msgid "'%s' does not take any parameters."
 msgstr "OYA Ibigenga"
 
 #: prog/aspell.cpp:335 prog/aspell.cpp:395
@@ -1088,14 +1088,6 @@ msgstr "Cyangwa a Mugenga Bwite Cyangwa ijambo Urutonde"
 msgid "  <norm-form>      normalization form to use, either none, internal, or strict"
 msgstr "<Ifishi Ifishi Kuri Gukoresha Ntacyo By'imbere Cyangwa"
 
-#: prog/aspell.cpp:2884
-#, fuzzy, c-format
-msgid ""
-"\n"
-"Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
-"\n"
-msgstr "ku"
-
 #: prog/aspell.cpp:2918
 #, fuzzy
 msgid ""
@@ -1374,7 +1366,7 @@ msgstr "Igiteranyo ijambo Uburebure Na: Ibyatanzwe ni Kinini Inyuguti"
 msgid "There must be at least one \"add\" line."
 msgstr ""
 
-#: modules/speller/default/suggest.cpp:1721
+#: modules/speller/default/suggest.cpp:1730
 msgid "one of ultra, fast, normal, slow, or bad-spellers"
 msgstr ""
 
@@ -1581,6 +1573,13 @@ msgstr "Ubwoko kugirango Inyandiko"
 #, fuzzy
 msgid "mode to skip URL like constructs (default mode)"
 msgstr "Ubwoko Kuri nka Mburabuzi Ubwoko"
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "Aspell %s.  Copyright 2000-2023 by Kevin Atkinson.\n"
+#~ "\n"
+#~ msgstr "ku"
 
 #, fuzzy
 #~ msgid "edit distance to use, override sug-mode default"

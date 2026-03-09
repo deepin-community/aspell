@@ -5,7 +5,7 @@
 GNU Aspell is a spell checker designed to eventually replace Ispell.
 It can either be used as a library or as an independent spell checker.
 
-Copyright © 2000-2019 Kevin Atkinson.
+Copyright © 2000-2026 Kevin Atkinson.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.1 or
@@ -15,10 +15,10 @@ copy of the license is included in the section entitled "GNU Free
 Documentation License". -->
 <!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>GNU Aspell 0.60.8: Using Aspell with other Applications</title>
+<title>GNU Aspell 0.60.8.2: Using Aspell with other Applications</title>
 
-<meta name="description" content="Aspell 0.60.8 spell checker user&rsquo;s manual.">
-<meta name="keywords" content="GNU Aspell 0.60.8: Using Aspell with other Applications">
+<meta name="description" content="Aspell 0.60.8.2 spell checker user&rsquo;s manual.">
+<meta name="keywords" content="GNU Aspell 0.60.8.2: Using Aspell with other Applications">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="makeinfo">
@@ -84,7 +84,7 @@ backends used by many applications that provide spell checker
 functionality.  Enchant is used by AbiWord; LyX; and via gspell and
 GtkSpell, a number of Gtk and GNOME applications.
 </p>
-<p>By default enchant is configuired to prefer Hunaspell over Aspell but
+<p>By default enchant is configured to prefer Hunspell over Aspell but
 this can easily be changed on a per-language basis.  If you wish to
 use Aspell for a specific dictionary say, American English, make sure
 that the Aspell backend is installed (on Debian and Ubuntu based
@@ -100,7 +100,7 @@ single line:
 the suggestion list with an application that used Aspell or by using
 the &lsquo;<samp>aspell check</samp>&rsquo; or &lsquo;<samp>aspell pipe</samp>&rsquo; commands.
 </p>
-<p>You can also prefer Aspell in general over Humspell by instead using:
+<p>You can also prefer Aspell in general over Hunspell by instead using:
 </p>
 <div class="example">
 <pre class="example">*:aspell,hunspell
@@ -112,13 +112,13 @@ the &lsquo;<samp>aspell check</samp>&rsquo; or &lsquo;<samp>aspell pipe</samp>&r
 <a name="With-Emacs-and-XEmacs"></a>
 <h4 class="subsection">3.3.2 With Emacs and XEmacs</h4>
 
-<p>Newer versions of emacs should prefer <code>aspell</code> over both
+<p>Newer versions of Emacs should prefer <code>aspell</code> over both
 <code>ispell</code> and <code>hunspell</code>, if you find this is not the
-case, then addding the line:
+case, then adding the line:
 </p>
 <pre class="verbatim">(setq-default ispell-program-name &quot;aspell&quot;)
 </pre>
-<p>to the end of your <samp>.emacs</samp> file should convince emacs to use
+<p>to the end of your <samp>.emacs</samp> file should convince Emacs to use
 Aspell.
 </p>
 

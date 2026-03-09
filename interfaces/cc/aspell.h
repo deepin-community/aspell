@@ -99,7 +99,7 @@ void aspell_key_info_enumeration_assign(struct AspellKeyInfoEnumeration * ths, c
 typedef struct AspellConfig AspellConfig;
 
 
-struct AspellConfig * new_aspell_config();
+struct AspellConfig * new_aspell_config(void);
 
 void delete_aspell_config(struct AspellConfig * ths);
 
@@ -192,7 +192,7 @@ int aspell_config_retrieve_int(struct AspellConfig * ths, const char * key);
 
 /* Returns a version string, which may include additional
  * information on how Aspell was compiled. */
-const char * aspell_version_string();
+const char * aspell_version_string(void);
 
 /******************************** error ********************************/
 
@@ -611,8 +611,10 @@ typedef struct AspellModuleInfoList AspellModuleInfoList;
 
 struct AspellModuleInfoList * get_aspell_module_info_list(struct AspellConfig * config);
 
+/* UNIMPLEMENTED. Always returns false (i.e. 0). */
 int aspell_module_info_list_empty(const struct AspellModuleInfoList * ths);
 
+/* UNIMPLEMENTED. Always returns 0. */
 unsigned int aspell_module_info_list_size(const struct AspellModuleInfoList * ths);
 
 struct AspellModuleInfoEnumeration * aspell_module_info_list_elements(const struct AspellModuleInfoList * ths);
@@ -624,8 +626,10 @@ typedef struct AspellDictInfoList AspellDictInfoList;
 
 struct AspellDictInfoList * get_aspell_dict_info_list(struct AspellConfig * config);
 
+/* UNIMPLEMENTED. Always returns false (i.e. 0). */
 int aspell_dict_info_list_empty(const struct AspellDictInfoList * ths);
 
+/* UNIMPLEMENTED. Always returns 0. */
 unsigned int aspell_dict_info_list_size(const struct AspellDictInfoList * ths);
 
 struct AspellDictInfoEnumeration * aspell_dict_info_list_elements(const struct AspellDictInfoList * ths);
@@ -668,7 +672,7 @@ void aspell_dict_info_enumeration_assign(struct AspellDictInfoEnumeration * ths,
 typedef struct AspellStringList AspellStringList;
 
 
-struct AspellStringList * new_aspell_string_list();
+struct AspellStringList * new_aspell_string_list(void);
 
 int aspell_string_list_empty(const struct AspellStringList * ths);
 
@@ -698,7 +702,7 @@ void aspell_string_list_assign(struct AspellStringList * ths, const struct Aspel
 typedef struct AspellStringMap AspellStringMap;
 
 
-struct AspellStringMap * new_aspell_string_map();
+struct AspellStringMap * new_aspell_string_map(void);
 
 int aspell_string_map_add(struct AspellStringMap * ths, const char * to_add);
 

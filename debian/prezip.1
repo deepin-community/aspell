@@ -1,30 +1,34 @@
-.TH PREZIP 1 "March 2010" "GNU" "Aspell Abbreviated User's Manual"
+.TH PREZIP 1 "March 2010" GNU "Aspell Abbreviated User's Manual"
 .SH NAME
-prezip, preunzip, precat \-  prefix delta compressor for Aspell
+prezip, preunzip, precat \- prefix delta compressor for Aspell
 .SH SYNOPSIS
 precat [\-dzhLV] [\-cfksSq] [file ...]
-.BR
 .SH DESCRIPTION
 .B prezip
-is a a prefix delta compressor.  It is 
+is a prefix delta compressor.
+It is
 .I not
 a general purpose compressor and should only be used on sorted word
-lists or other similar text files.  It will likely
+lists or other similar text files.
+It will likely
 .I increase
 the size of binary data.
 .PP
 If invoked as
-.B prezip,
-the default action is to compress.  If invoked as
-.B preunzip,
-the default action is to decompress.  If invoked as
-.B precat,
+.BR prezip ,
+the default action is to compress.
+If invoked as
+.BR preunzip ,
+the default action is to decompress.
+If invoked as
+.BR precat ,
 the default action is to decompress to stdout.
 .PP
-If no file names are given then 
+If no file names are given then
 .B prezip
 will compress or decompress from the standard input to the standard
-output.  Short flags can be combined so that "\-c \fB\-s\fR" is the same
+output.
+Short flags can be combined so that "\-c \fB\-s\fR" is the same
 as "\-cs".
 .SH OPTIONS
 .TP
@@ -56,10 +60,12 @@ keep input files
 sort and remove duplicates before compressing
 .TP
 \fB\-S\fR \fB\-\-nocwl\fR
-do not rename .wl suffix to .cwl (use .wl.pz instead)
+do not rename .wl suffix to .cwl
+(use .wl.pz instead)
 .TP
 \fB\-q\fR \fB\-\-quiet\fR
 suppress all warnings
 .SH AUTHOR
 This manual page was written by Brian Nelson <pyro@debian.org> based on
-the output of help2man.  Aspell is Copyright \(co 2002 Kevin Atkinson.
+the output of help2man.
+Aspell is Copyright \(co 2002\(en2025 Kevin Atkinson.

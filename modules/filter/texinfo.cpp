@@ -26,7 +26,7 @@ namespace {
     struct Table {
       String name;
       bool ignore_item;
-      Table(String n) : name(n), ignore_item(false) {}
+      Table(ParmStr n) : name(n), ignore_item(false) {}
     };
 
     String last_command;
@@ -148,7 +148,7 @@ namespace {
             } else if (env_command == last_command) {
               env_ignore++;
             } else if (last_command.suffix("table")) {
-              table_stack.push_back(last_command);
+              table_stack.push_back(Table(last_command));
             }
 
           }
@@ -161,7 +161,7 @@ namespace {
         
       } else if (!seen_input && *cur == '\\' && stop - cur >= 6 
                  && cur[1] == 'i' && cur[2] == 'n' && cur[3] == 'p' 
-                 && cur[4] == 'u' && cur[5] == 't') {
+                 && cur[4] == 'u' && cur[5] == 't' /* i.e '\input' */) {
         
         last_command.clear();
         for (int i = 0; i != 6; ++i)
@@ -170,7 +170,6 @@ namespace {
         ++ignore;
         in_line_command = true;
         seen_input = true;
-        ++cur;
 
       } else if (last_command == "end") {
 

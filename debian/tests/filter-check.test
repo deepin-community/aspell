@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+mkdir -p test/tmp
+
+( cd test && ./filter-test "aspell" < markdown.dat )

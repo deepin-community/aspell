@@ -1,14 +1,12 @@
 Source: aspell
 Maintainer: Agustin Martin Domingo <agmartin@debian.org>
 Section: text
-Priority: optional
 Build-Depends: debhelper-compat (= 13),
                libncurses-dev,
                texinfo,
                autopoint,
 	       w3m
-Standards-Version: 4.6.2
-Rules-Requires-Root: no
+Standards-Version: 4.7.3
 Vcs-Browser: https://salsa.debian.org/debian/aspell
 Vcs-Git: https://salsa.debian.org/debian/aspell.git
 Homepage: http://aspell.net/

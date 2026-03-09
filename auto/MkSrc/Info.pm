@@ -59,7 +59,7 @@ each proc sub should take the following argv
   returns alt type: the constructor returns some type other than
     the object from which it is a member of
   no native: do not attempt to create a native implementation
-  treat as object: treat as a object rather than a pointer
+  treat as object: treat as an object rather than a pointer
   no conv: do not converted an encoded string
 
 The %info structure is initialized as follows:
@@ -79,7 +79,7 @@ The %info structure is initialized as follows:
     options => ['strip', 'prefix', 'c impl headers'],
     groups => undef},
   group => {
-    # a group is a colection of objects which should be grouped together
+    # a group is a collection of objects which should be grouped together
     # this generally means they will be in the same source file
     options => ['no native'],
     groups => ['enum', 'struct', 'union', 'func', 'class', 'errors']},
@@ -121,8 +121,8 @@ The %info structure is initialized as follows:
 
 =pod
 
-In addition to the categories listed above a "methods" catagory by
-be specified in under the class category.  A "methods" catagory is
+In addition to the categories listed above a "methods" category by
+be specified in under the class category.  A "methods" category is
 created for each methods group under the name "<methods name> methods"
 When groups is undefined a type name may be specified in place of
 a category

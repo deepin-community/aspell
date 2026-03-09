@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aspell-0.60.8-pre2\n"
 "Report-Msgid-Bugs-To: kevina@gnu.org\n"
-"POT-Creation-Date: 2019-10-12 18:20-0400\n"
+"POT-Creation-Date: 2026-01-27 03:47-0500\n"
 "PO-Revision-Date: 2019-09-24 18:53+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <gnu@d07.ru>\n"
@@ -683,7 +683,9 @@ msgid "Invalid Option: %s"
 msgstr "Неверная опция: %s"
 
 #: prog/aspell.cpp:322
-msgid " does not take any parameters."
+#, fuzzy, c-format
+#| msgid " does not take any parameters."
+msgid "'%s' does not take any parameters."
 msgstr " не принимает никаких параметров."
 
 #: prog/aspell.cpp:335 prog/aspell.cpp:395
@@ -936,17 +938,6 @@ msgstr "    дамп, создание или объединение слова�
 #: prog/aspell.cpp:2874
 msgid "  <norm-form>      normalization form to use, either none, internal, or strict"
 msgstr "  <форма-норм>     используемая форма нормализации: none, internal или strict"
-
-#: prog/aspell.cpp:2884
-#, c-format
-msgid ""
-"\n"
-"Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
-"\n"
-msgstr ""
-"\n"
-"Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
-"\n"
 
 #: prog/aspell.cpp:2918
 msgid ""
@@ -1205,7 +1196,7 @@ msgstr "Общая длина слов с данными soundslike превыш
 msgid "There must be at least one \"add\" line."
 msgstr "Должна быть хотя бы одна строка \"add\"."
 
-#: modules/speller/default/suggest.cpp:1721
+#: modules/speller/default/suggest.cpp:1730
 msgid "one of ultra, fast, normal, slow, or bad-spellers"
 msgstr "один из: ultra, fast, normal, slow или bad-spellers"
 
@@ -1379,6 +1370,20 @@ msgstr "режим проверки документов Texinfo"
 #: modules/filter/modes/url.amf:5
 msgid "mode to skip URL like constructs (default mode)"
 msgstr "режим пропуска конструкций типа URL (режим по умолчанию)"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
+#~| "\n"
+#~ msgid ""
+#~ "\n"
+#~ "Aspell %s.  Copyright 2000-2023 by Kevin Atkinson.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
+#~ "\n"
 
 #~ msgid "edit distance to use, override sug-mode default"
 #~ msgstr "изменение исп. расстояния, перекрывает sug-mode"

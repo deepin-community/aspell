@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aspell 0.60.6\n"
 "Report-Msgid-Bugs-To: kevina@gnu.org\n"
-"POT-Creation-Date: 2019-10-12 18:20-0400\n"
+"POT-Creation-Date: 2026-01-27 03:47-0500\n"
 "PO-Revision-Date: 2010-02-28 22:09+0200\n"
 "Last-Translator: Marquinos <maacub@gmail.com>\n"
 "Language-Team: Asturian <ubuntu-l10n-ast@lists.ubuntu.com>\n"
@@ -684,7 +684,9 @@ msgid "Invalid Option: %s"
 msgstr "Opción non válida: %s"
 
 #: prog/aspell.cpp:322
-msgid " does not take any parameters."
+#, fuzzy, c-format
+#| msgid " does not take any parameters."
+msgid "'%s' does not take any parameters."
 msgstr " nun almite parámetru dalu."
 
 #: prog/aspell.cpp:335 prog/aspell.cpp:395
@@ -938,21 +940,6 @@ msgstr "    vuelca, crea o entemez un diccionariu principal, personal o de troqu
 #: prog/aspell.cpp:2874
 msgid "  <norm-form>      normalization form to use, either none, internal, or strict"
 msgstr "  <triba-norm>     triba de normalización que se va usar: none, internal o strict"
-
-#: prog/aspell.cpp:2884
-#, fuzzy, c-format
-#| msgid ""
-#| "\n"
-#| "Aspell %s.  Copyright 2000-2004 by Kevin Atkinson.\n"
-#| "\n"
-msgid ""
-"\n"
-"Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
-"\n"
-msgstr ""
-"\n"
-"Aspell %s.  Copyright 2000-2004 by Kevin Atkinson.\n"
-"\n"
 
 #: prog/aspell.cpp:2918
 msgid ""
@@ -1212,7 +1199,7 @@ msgstr "La llonxitú total de la pallabra, contando los datos de l'asemeyanza fo
 msgid "There must be at least one \"add\" line."
 msgstr "Ha haber a lo menos una llinia «add»."
 
-#: modules/speller/default/suggest.cpp:1721
+#: modules/speller/default/suggest.cpp:1730
 msgid "one of ultra, fast, normal, slow, or bad-spellers"
 msgstr "ún d'ente ultra, fast, normal, slow o bad-spellers"
 
@@ -1390,6 +1377,20 @@ msgstr "mou pa comprobar documentos Texinfo"
 #: modules/filter/modes/url.amf:5
 msgid "mode to skip URL like constructs (default mode)"
 msgstr "mou pa omitir construcciones del tipu URL (mou por defeutu)"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "Aspell %s.  Copyright 2000-2004 by Kevin Atkinson.\n"
+#~| "\n"
+#~ msgid ""
+#~ "\n"
+#~ "Aspell %s.  Copyright 2000-2023 by Kevin Atkinson.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Aspell %s.  Copyright 2000-2004 by Kevin Atkinson.\n"
+#~ "\n"
 
 #~ msgid "edit distance to use, override sug-mode default"
 #~ msgstr "distancia d'edición a usar, nun se tien en cuenta el sug-mode por defeutu"

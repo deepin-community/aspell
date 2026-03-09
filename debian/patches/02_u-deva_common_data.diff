@@ -3,7 +3,7 @@
 ## 
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -395,7 +395,8 @@ pkgdata_DATA = \
+@@ -403,7 +403,8 @@ pkgdata_DATA = \
    data/iso-8859-16.cmap data/iso-8859-16.cset \
    data/koi8-r.cmap data/koi8-r.cset \
    data/koi8-u.cmap data/koi8-u.cset \

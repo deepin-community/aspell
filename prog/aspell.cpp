@@ -1,8 +1,8 @@
 // This file is part of The New Aspell Copyright (C)
-// 2002,2003,2004,2011,2019 by Kevin Atkinson under the GNU LGPL license
-// version 2.0 or 2.1.  You should have received a copy of the LGPL
-// license along with this library if you did not you can find it at
-// http://www.gnu.org/.
+// 2002,2003,2004,2011,2019,2023,2026 by Kevin Atkinson
+// under the GNU LGPL license version 2.0 or 2.1.  You should have received a
+// copy of the LGPL license along with this library if you did not you can
+// find it at http://www.gnu.org/.
 
 //
 // NOTE: This program currently uses a very ugly mix of the internal
@@ -319,7 +319,7 @@ int main (int argc, const char *argv[])
       if (o->num_arg == 0) {
         num_parms = 0;
 	if (parm[0] != '\0') {
-	  print_error(_(" does not take any parameters."), 
+	  print_error(_("'%s' does not take any parameters."),
 		      String(argv[i], parm - argv[i]));
 	  return 1;
 	}
@@ -2385,7 +2385,7 @@ void munch_list_complete(bool multi, bool simplify)
 
   // If a base word has both prefixes and suffixes try to combine them.
   // This can lead to multiple entries for the same base word.  If "multi"
-  // is true than include all the entries.  Otherwise, only include the
+  // is true, then include all the entries.  Otherwise, only include the
   // one with the largest number of expansions.  This is a greedy choice
   // that may not be optimal, but is close to it.
   p = table.begin();
@@ -2881,9 +2881,9 @@ static const unsigned help_text_size = sizeof(help_text)/sizeof(const char *);
 void print_help (bool verbose) {
   load_all_filters(options);
   if (verbose) {
-    printf(_("\n"
-             "Aspell %s.  Copyright 2000-2019 by Kevin Atkinson.\n"
-             "\n"), aspell_version_string());
+    printf("\n"
+           "Aspell %s.  Copyright 2000-2026 by Kevin Atkinson.\n"
+           "\n", aspell_version_string());
     for (unsigned i = 0; i < help_text_size; ++i)
       puts(gt_(help_text[i]));
   } else {
