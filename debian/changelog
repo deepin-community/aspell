@@ -1,3 +1,9 @@
+aspell (0.60.8.2-4) unstable; urgency=medium
+
+  * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
+
+ -- tunaichao <tunaichao@uniontech.com>  Fri, 11 Sep 2026 09:59:58 +0800
+
 aspell (0.60.8.2-3) unstable; urgency=medium
 
   * debian/tests/control: Also depend on build-essential and
