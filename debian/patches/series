@@ -5,3 +5,4 @@
 07_filter.diff
 08_filters-info-installdir.diff
 09_debian-dictdir.diff
+CVE-2026-103658.patch
