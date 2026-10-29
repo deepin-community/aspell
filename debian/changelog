@@ -1,3 +1,24 @@
+aspell (0.60.8.2-3deepin2) unstable; urgency=medium
+
+  * fix(cve): CVE-2026-103658 (medium) - common/string.hpp: fix integer
+    overflow in String::reserve   Upstream:
+    https://github.com/GNUAspell/aspell/commit/b830b6e836aea9373fe5dd361
+    b58e2d19d511958
+  * fix(cve): CVE-2026-75818 (low) - prezip: correctly detect bad input
+    Upstream:
+    https://github.com/GNUAspell/aspell/commit/15b188437f9e0192d4ac4472a
+    d66a4e2f62a782f
+  * fix(cve): CVE-2026-75819 (low) - speller/readonly_ws.cpp: check that
+    offsets are valid in dictionary header   Upstream:
+    https://github.com/GNUAspell/aspell/commit/941953b25031bc9104e83f58e
+    138a664b8dedc3f
+  * fix(cve): CVE-2026-75820 (low) - Limit length of words added to the
+    personal dictionary to 250 characters.   Upstream:
+    https://github.com/GNUAspell/aspell/commit/782ce94e4dc71eaec4ee1bd94
+    5eb3b9c47c5387d
+
+ -- deepin-ci-robot <packages@deepin.org>  Wed, 21 Oct 2026 01:39:35 +0800
+
 aspell (0.60.8.2-3deepin1) unstable; urgency=medium
 
   * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
