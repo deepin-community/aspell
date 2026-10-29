@@ -12,6 +12,10 @@ aspell (0.60.8.2-3deepin2) unstable; urgency=medium
     offsets are valid in dictionary header   Upstream:
     https://github.com/GNUAspell/aspell/commit/941953b25031bc9104e83f58e
     138a664b8dedc3f
+  * fix(cve): CVE-2026-75820 (low) - Limit length of words added to the
+    personal dictionary to 250 characters.   Upstream:
+    https://github.com/GNUAspell/aspell/commit/782ce94e4dc71eaec4ee1bd94
+    5eb3b9c47c5387d
 
  -- deepin-ci-robot <packages@deepin.org>  Wed, 21 Oct 2026 01:39:35 +0800
 
