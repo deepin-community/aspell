@@ -7,3 +7,4 @@
 09_debian-dictdir.diff
 CVE-2026-103658.patch
 CVE-2026-75818.patch
+CVE-2026-75819.patch

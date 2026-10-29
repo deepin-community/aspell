@@ -8,6 +8,10 @@ aspell (0.60.8.2-3deepin2) unstable; urgency=medium
     Upstream:
     https://github.com/GNUAspell/aspell/commit/15b188437f9e0192d4ac4472a
     d66a4e2f62a782f
+  * fix(cve): CVE-2026-75819 (low) - speller/readonly_ws.cpp: check that
+    offsets are valid in dictionary header   Upstream:
+    https://github.com/GNUAspell/aspell/commit/941953b25031bc9104e83f58e
+    138a664b8dedc3f
 
  -- deepin-ci-robot <packages@deepin.org>  Wed, 21 Oct 2026 01:39:35 +0800
 
